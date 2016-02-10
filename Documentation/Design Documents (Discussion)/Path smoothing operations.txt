@@ -1,0 +1,63 @@
+BREAKDOWN OF PATHING LOAD
+	Long-term Path: How to reach the ultimate goal
+		determined by theta*
+		tied to the grid
+		expensive to compute, so try to do this only when absolutely necessary
+
+	Short-term Path: journey between nodes
+		exists in open space(ignores tile_boundaries except when pathability is in question)
+		attempts to chart a path that allows the unit to turn gradually
+		obviously, its more important for the path to work than for it to look good, so if the only thing that works is a sharp turn, do it. the immediate destination will slow down for it if necessary.
+
+	Immediate Destination:
+		path_to_point must be pathable;
+		angle_difference(move_dir,target_dir) must be <= rot_max;
+		pixel by pixel adjustments if necessary;
+		
+
+IMPLEMENTATION
+	long-term:
+		decided by theta* obviously. creates a set of key points.
+		
+	Short-term:
+		Local Movement
+	 - 1. We know from theta* that the main path is clear.
+	 - 2. However, we would prefer that the unit turn gradually
+	 - 3. Best case: open field: the unit can move with complete freedom
+	 - 4. worst case: cramped corridor: only the guaranteed path is permitted
+	 - 5. we want the algorithm to be general enough that it can accommodate both of these, and take advantage of hybrid situations
+
+	The path: 
+	 - We can guarantee (by checking degree_difference() < 180) that the unit does not backtrack;
+	 - We must be aware of corner cases in which the destination is very close, hence will overshoot the target.
+	 - We must check whether the t
+
+
+		find the next key_point. if applicable, remember previous key_point
+		//the line between start and target is guaranteed to be pathable.
+		check to see if short_term graph should be updated.
+		if dist_total > spd...
+		on initialization of short_term path: 
+			note the start direction and end direction.
+			if start direction is more than 180 degrees away, find the rotation direction(CW or CCW), and calculate start direction at end of pivoting routine;
+			find the remaining difference between a_start and a_end (a_total)
+			take (a_total/(dist_total/spd)). this is the Average Rate of Angular Change (ARoAC);
+			(if ARoAC is greater than rot_max, (ie, the path is too short to navigate smoothly), just roll with it.)
+		
+		Immediate Destination
+			//if you haven't reached the pivot angle
+			if angle_diff(dir_move,dir_target) > angle_diff(pivot_to,dir_target){
+				//stand in place and pivot full direction until pivot direction;
+			}else{
+				rotate by min(ARoAC,rot_max);
+				move in DIRECTION by AMOUNT;
+
+			}
+			
+HOLD ON
+The ARoAC is off;
+
+the distance is the number of steps it would take to reach the target if moving on a straight line.
+but it doesn't represent the number of steps the character will take if he goes along the path.
+
+how would we actually calculate that? this is important. otherwise we might not even reach the target.

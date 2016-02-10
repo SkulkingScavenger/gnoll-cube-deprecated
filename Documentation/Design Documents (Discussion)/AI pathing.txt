@@ -1,0 +1,129 @@
+AI PATHING
+
+To simplify the AI path finding process, let the AI begin with information about the surrounding terrain. 
+this should be stored in a way that can be easily translated into movement.
+since we already have terrain tiles, this seems like a decent way to go about it.
+
+each terrain tile corresponds to a node. the AI should internally keep track of the relative distances of the nodes.
+as the AI wanders, it should add new nodes to its memory.
+
+we could make our job easier and make AIs smarter by ignoring local memory and assuming AI's automatically know the full layout of the map.
+the AI has to recalculate the paths anyway every time it moves anyway to get new distances.
+However, it is kind of useful to be able to immediately know which tiles are out of range and which aren't.
+
+Part of the problem is that, although we have a ready made navmesh in the form of ground_tiles, the nature of the tiles makes it difficult to be precise. we can get rough paths leading from one tile to another, but because of their gridlike structure, the actual motion may not be as smooth as we would like. to achieve smooth motion, we would need to implement a spline effect and set a radius of movement. This will probably make an already expensive computation even worse, but I can only assume it will be worth it.
+
+We have three or so related, but different, tasks
+	1. find if any path exists from A to B (not exceeding some upper limit).
+	2. find the next immediate position to move to en route to point B
+	3. in order to know which position to move towards, the entire path from A to B must be calculated before hand. therefore we must have access to the set of nodes connecting A to B
+		(character can get from A to B)
+		3a. find set of grid_nodes leading from A to B
+		3b. smooth out the path.
+
+Suggested solution:
+	merge steps 1 and 3. its not worth it to run A* twice.
+	so new step 1 is get the path, if any. if the path != noone (the error code) then just exit. otherwise...
+	step 2 is to refine the path. basically, check for any shortcuts. see refine_path() for pseudocode
+	Once the path has been determined, don't recalculate unless something wierd happens.
+	step 3 is to actually move towards the node. The Unit can make some decisions in this part.
+	Unless the next node is the last in the path, the unit should think ahead. The unit probably cannot move exactly the distance between two nodes. it is possible that a unit could overstep the next node. in this case, the unit should ignore the immediate node and focus on trying to get as close to the next node as possible. 
+	
+Actually, it might be possible to further optimize this system by 
+
+Theorem: if node_B lies on the same line as node_A and node_C, then node_B can be deleted without changing the path.
+Corollary: if the line defined by (node_A,node_B) == the line defined by (node_A,node_C), then node_B can be deleted.
+
+scavengers_astar(dest_x,dest_y,max){
+	if (path != noone){
+		with(path){instance_destroy();}
+	}
+	destination = instance_position(dest_x,dest_y,obj_terrain);
+	path = instance_create(0,0,obj_path);
+	ds_list_add(path.open,instance_position(x,y,obj_terrain));
+	while(ds_list_size(path.open)>0 && ds_list_size(path.nodes)<max){//while openSet !empty
+		crnt = path.open[|0];
+		if (crnt == goal){break;}
+		ds_list_delete(path.open,0);
+		ds_list_add(path.closed.crnt);
+		for(i=0;i<neighbor_count;i+=1){
+			if(neighbor[i] !in_open){
+				if(neighbor[i] !in_closed){
+					if(point_pathable(neighbor[i]).x,neighbor[i]).y){
+						//move it to the open list and calculate cost
+						ds_list_add(path.open);
+					}
+				}
+			}
+		}
+	}
+}
+
+bool smite_node(x){
+	node_previous = path.nodes[|x-1];
+	node = path.nodes[|x];
+	node_next = path.nodes[|x+1];
+	//if slope of node_previous->node_next == slope of node_previous->node, delete node
+	if((node_previous.y - node_next.y)/(node_previous.x - node_next.x)==(node_previous.y - node.y)/(node_previous.x - node.x)){
+		ds_list_delete(path,x);
+	}
+}
+
+///Pseudocode 
+
+refine_path(path){
+	new_path = instance_create(0,0,obj_path)
+	l = path.length;
+	for(i=0;i<l;i+=1){
+		node_A = path.nodes[|i];
+		for(j=path.length-1;j>i+1;j-=1){
+			node_B = path.nodes[|j];
+			if(linear_path_exists(node,)){
+				
+			}
+		}
+	}
+}
+
+War Room Discussion (Operation A*)
+
+We have discovered a bug. this bug can be reproduced by clicking a particular space.
+our controlled environment creates the bug at the 141st iteration, but path length doesn't seem problematic
+the issue occurs while the crnt node is 100591, located at 416,304
+we have identified the time of crisis as arising at the command ds_list_destroy()
+f(x) is 14, probably irrelevant
+ds_map_exists returns true
+list_empty returns true
+the id of the list is 0, which makes me think something has happened to corrupt the list/map at some point.
+
+I have reason to believe that this has something to do with turning corners, since there were no issues until obstacles were introduced.
+there are only a few points at which an object is loaded into f_score;
+the second one especially intrigues me, since it's possible it wouldn't be called for the first 140 iterations
+If this proves fruitless, we may have a case of list corruption due to some improperly bounded function deleting other people's lists.
+
+Well, we tracked it down, and apparently the list's id really is 0. go figure. well, now we know that gamemaker's at least smart enough to recycle list IDs. anyway, we checked it just as the list was created. if you check the size, it even gives you 1.
+
+Which leads me to the next line of inquiry: where is the list losing its content that isn't resulting in the list being deleted from the map?
+
+traceback: 
+ - 100591 was already in the OpenSet
+ - 100591 passed the pathing check (as expected)
+ - however, its distance, 14, did not yet exist in the map
+ - i was set to 1
+
+could it be relevant what happened for other i's?
+ - no, investigation revealed that 0,2,and 3 were not dealt with during or after the 140th iteration
+ 
+so, actually, the deletion was obvious and intentional. in fact, the reason the list is NOT destroyed is because its destruction is what causes the crash. The plot thickens.
+
+GODDAM IT WAS A WILDGOOSECHASE THE  WHOLE TIME
+that stupid debug statement, ds_list_size("jumpship"); it was a complete red herring.
+
+Alright, the real culprit is actually object 100598, which actually looks just like the last suspect
+he was added to openset in iteration 107
+his path was updated in iteration 116
+and he was selected as current node in iteration 140 AND IN 142?!?!
+okay, this is the problem. somehow this node was not deleted properly from the f_score
+Time to investigate...
+
+

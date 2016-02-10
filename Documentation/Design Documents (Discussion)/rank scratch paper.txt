@@ -1,0 +1,18 @@
+Character Rank
+	Scavenger
+	Skulker
+	Raider
+	Marauder
+	Slayer
+
+Warband Rank
+	squadron
+	platoon
+	regiment
+	army
+	legion
+
+///Ctrl+Z
+if current_action == null
+	current_action = new obj_action
+else add current subaction to current action

@@ -1,0 +1,33 @@
+///Chamber load
+
+In Exit Script:
+	loading = true;
+	
+
+In Dungeon Step Event:
+	if(loading){
+		switch (load_phase){
+		case 0://destroy objects
+		case 1://clear tiles
+			//clear room
+			if(lc < room_height+256){
+				for(i=0;i<320;i+=1){
+					
+				}
+				lc += 320;
+			}
+		case 2:
+			//define objects
+			if(!destined_chamber.defined){
+				for (i=0;i<destined_chamber.)
+			}else{
+				load_phase = 4;
+			}
+			break;
+		case 3:
+			break;
+		case 4:
+			
+			break;
+		}
+	}

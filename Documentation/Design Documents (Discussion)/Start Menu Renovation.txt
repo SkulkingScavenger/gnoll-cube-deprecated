@@ -1,0 +1,21 @@
+Start Menu
+
+Inventory Menu
+var tab[0], selected_tab, item[0,0], selected_item, submenu[0], selected_submenu;
+
+cancel_btn
+	if selected_submenu == 0
+		exit
+	else
+		selected_submenu -= 1;
+
+Each submenu is an object with its own btn_array.
+Each submenu is active independently from the root. the root must always have exactly one active submenu.
+arrowkey movement is controlled by the submenu
+submenus are generalized for grid layouts.
+	
+	
+obj_submenu_parent
+	obj_submenu_grid (used for things that have a full grid, including single-row )
+	obj_submenu_list
+	obj_submenu_ragged

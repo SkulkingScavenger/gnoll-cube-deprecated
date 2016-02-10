@@ -1,0 +1,9 @@
+Gnoll Raider Loading Screen Mechanic:
+
+It has come to my attention that every other game in existence has to stall while loading levels. making objects invisible when not onscreen is trivial, but loading objects is not. Even 2d games take a long time to load.
+
+Eventually we will have to allow for the possibility of large levels that may induce lag or stalling. we should implement loading screens to make this seem natural.
+
+One difficulty with loading screens in Game Maker is that there is no way to modify a room that is not currently active. this means that if we are going to "load" a room we must first go to the room and then generate it. So the loading screen will really be a screen, as opposed to a transition room. 
+
+Once the loading screen is up, we will have the dungeon object generate the room. If a static loading image is displayed, it will look alright even if the game is doing an otherwise glitchy-looking stall. we could make this more sophisticated by generating the room in predefined chunks where each chunk is small enough that most computers will be able to create it in a single step. experience shows that we can generate very large chunks without worrying about stalls, so probably this will be manageable.

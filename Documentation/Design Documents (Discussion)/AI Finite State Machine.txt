@@ -1,0 +1,69 @@
+Switch (state)
+// Out of Combat
+	case "Idle/Sleeping":
+	
+	case "Alert/Patrol":
+	
+	case "Lying in Wait":
+		if Enemy Detected -> Charge/Attack
+	
+	case "Investigating":
+		move towards object
+		if at object{ pause to investigate}
+		if dangerous {attack}
+		else {return to previous state}
+	case "Hunting":
+	
+	
+// In Combat
+	case "Pursuing":
+		if enemy in LOS or in range, continue pursuit
+		elif other enemies available -> charge/attack
+		elif -> resume post(alert)/raise alarm/patrol
+	case "Attacking":
+	
+	case "Charging":
+	
+	case "Dodging":
+	
+	case "Maintaining Distance/Securing Position":
+		if desired distance reached -> attack
+		elif desired distance unattainable -> attack
+		elif -> keep retreating
+	
+	case "Retreating":
+		if attack feasible -> charge/attack
+		elif help available -> raise alarm
+		elif out of range/danger past -> become alert
+		else keep running
+		
+Transitional States:
+	Sleeping->Onguard //wake up
+	Offguard->Onguard //become_alert
+	Offguard->combat  //surprised
+	Onguard->Offguard //become_unwary
+	Onguard->Investigating //begin investigation (go to position)
+	Onguard->Combat //Begin Combat#1
+	Investigating->Onguard //suspicion_allayed/ Return to position/patrol-route (go back to old position)
+	Investigating->Hunting //become_alarmed
+	Investigating->Combat //Begin Combat#2
+	Hunting->Onguard //end_pursuit
+	Hunting->Investigating //begin investigation 
+	Hunting->Combat //begin combat#3
+	Combat->Hunting //Pursue Fleeing Enemy
+	Combat->Onguard //End Combat/ Return to position/patrol-route
+	
+Non-Transitional States
+	Take_Damage //knock back and blink
+	Sleeping //Sleep
+	Offguard //standby or pace
+	Onguard // standby or patrol
+	Investigating // investigate area (look around)
+	Hunting // search area by guessing where enemy might be
+	Combat
+	
+Combat substates
+	Channeling(no movement allowed)
+	Channeling(movement allowed)
+	Not Channeling
+	Movement: charging/engaging,strafing,fleeing, tactical,

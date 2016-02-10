@@ -1,0 +1,17 @@
+Gnoll Raider Code Conventions:
+
+Standard Variables
+	Spatial Coordinates: x,y,z: defines the position of the west,north,bottom corner of the object's bounding cube
+	Spatial Dimensions: w,h,d: defines the width, height, and depth of the object's bounding cube
+
+Reserved Events
+	For Menus:
+		user 15: handle message box input (required by message boxes)
+		user 14: handle scroll (required by scrolling submenu)
+		user 13:
+		
+	For dungeon cells
+		user 0: Constructor
+	For Units:
+		
+		

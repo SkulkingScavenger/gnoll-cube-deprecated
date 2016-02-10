@@ -1,0 +1,28 @@
+How to save and load tiles:
+
+	tiles must be generated at runtime
+	there is no cost involved in copying from a text file.
+	however, there is a cost in calling actions while generating the chamber
+
+	the advantage of attaching tiles to objects is that the depth can be calculated at run-time
+	
+	the advantage of not attaching tiles to objects is that 
+	
+STEP EVENT FOR LOAD_CONTROL
+	if(i < chunks){
+		run_script(load_chunk[i]);
+	}
+	
+How to generate the scripts:
+
+	compile a list of dummy objects. 
+	the bulk of these should be terrain objects and tile objects
+	after terrain and tile objects come doodads, enemies, interactive objects and randomizable tiles.
+	we reserve the final chunk for system requirements that cannot be interfered with. 
+	
+	after we have our lists of dummy objects, determine how many objects should be written to each chunk. it seems that a hundred or so per step is reasonable.
+	add two for the final system chunk and the header chunk to get the total chunk_count.
+	
+	write a series of text documents in the format export_i.txt
+	in each document, write down the proper code to generate the designated number of objects
+	

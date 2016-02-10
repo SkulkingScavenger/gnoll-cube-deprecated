@@ -1,0 +1,23 @@
+Restructuring Ideas
+
+Player Object[]
+player[pnum].hp vs. mu_hp[crnt_pnum]
+player[pnum].abl_ready
+
+Players wander off
+	store room/chamber id
+	we assume floor id is the same for now
+	
+Abstract out controls? 
+	have obj_player remotely control the obj_gnoll
+	Advantages: 
+			persistent player object survives death and room transitions
+			allow abstraction of formerly global variables
+			allow abstraction of global cooldowns
+	Disadvantages:
+			Code Bloat (main_unit.x instead of just x, gets worse for things like move_contact_solid())
+			Too many with statements
+	
+Need Better Collision System
+	probably try to make an extension in C++ to avoid lag
+Need Better Pathfinding System

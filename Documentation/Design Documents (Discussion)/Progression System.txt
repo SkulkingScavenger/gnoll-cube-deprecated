@@ -1,0 +1,40 @@
+Progression System
+
+Story:
+	While I am dead set on telling this story in this game, I have come to accept that a multiplayer game cannot rely on a story to carry the game, and consequently that the bulk of actual play time will be spent in dungeons, and the complete script will not be that long. Ultimately, this is meant to be a game for multiple people to play over and over again, in which the groups may be different every time. People occasionally reread the same book twice, but this is not usually a group activity. The gameplay must stand on its own and be enjoyable even without the story. 
+	Because of the random nature of the dungeons, the story will progress based on deterministic nodes like boss fights and static objectives. the paths the players take to reach these points will vary, but the results will be similar even if the players must sometimes make choices that affect the plot.
+
+Characters:
+	Stats:
+	After a long discussion, it seems that characters should not gain flat bonuses to base stats like damage and hitpoints in linear fashion. Consequently, any concept of gaining levels seems obsolete. Instead, these will be obtained from skills.
+	Skills:
+	While I dislike flat stat bonuses, I do intend to implement skills. skills improve on flat modifiers in two ways: first, they are non-linear and therefore easier to balance. slowly increasing base damage forever and ever will eventually force the enemies to become stronger and even things out. granting a unique skill that increases damage will not ever have to become obsolete, because we can guarantee that a given player cannot raise his base damage stat past a given level. Secondly, skills allow players to make tactical decisions by either limiting the number of skill points available (and ensuring that there will always be more skills than points) or by making some skill sets mutually exclusive (i.e., one may choose the cautious trait or reckless trait, but not both). since skills do not need to scale indefinitely, they can provide unusual or unique bonuses. 
+	To discourage grinding for combat bonuses, I plan to base skills off of story progression. Each boss slain provides a skill point.
+	Abilities:
+	
+Rewards:
+	Skill Points:
+		Bosses and other significant non-repeatable challenges award skillpoints, which are the primary mode of combat improvement.
+	Rank Bonus:
+		As characters adventure, they increase in notoriety. notoriety is gained by accomplishing fixed story objectives, but it can also be earned by getting other objectives, possibly by acquiring loot. Occasionally, characters may have the opportunity to increase their notoriety through other means.
+		As characters prove themselves, they are given greater rank by the clan, and afforded certain perks and benefits.
+	Gold:
+		In-world, gold is a primary motivator for the characters. however, the things that motivate people to seek wealth in real life are abstracted out in gnoll raider. In order to motivate players to pursue wealth, we propose to implement an achievement system where gold is a static bonus objective present in every dungeon. each dungeon contains a fixed amount of treasure, randomly dispersed through its chambers. each dungeon maintains a series of achievement thresholds based on treasure collected, such 50%, 75% and 100%. the main objective is always the minimum level of achievement. each time a player achieves a new threshold of gold, he is rewarded with some kind of bonus, probably notoriety but maybe something else too.
+	Story Achievements:
+		Completing the main objective of a quest allows players to progress to the next level. In addition to the main objectives, there are occasionally bonus objectives. Bonus objectives will be diverse and specific to the dungeon, as will be the rewards for completing them. many will probably unlock bonus levels or alternate endings. some will include bonuses like skillpoints while others will be purely for flavor and completionist satisfaction.
+	Unique Traits:
+		Unlike skills, these cannot be seen on a skill tree and cannot be bought with skill points. The character may select one at creation, and additional traits may be acquired at certain points in the story. 
+	Warband Bonuses:
+		In addition to improving their individual characters, warbands improve as they progress through the story. 
+
+
+Warbands:
+	To help delineate the progression of a group and the progression of its individual members, I propose that we implement a separate object called a warband or raiding party or something along those lines. The idea is that a named group has an existence distinct from the roster of its members, which might shift significantly in the course of its existence. The story progression and anything that would otherwise cause conflict when loading different characters will be stored in a warband. when a character leaves one warband and joins another, the character loses any of the progression tied to the old warband and assumes any progress made by the old warband. warbands are essentially game-files, distinct from character-files. joining or creating a warband is the same as joining or creating a session
+
+
+Implications for saving and Loading:
+	We will continue to base saving and loading off of individual characters. 
+	The biggest problem raised by saving individual characters is that of mismatched character progressions. when a character who has reached a high level of achievement joins a game created by a character of a lower level of achievement, the discrepancies arising between the two must be resolved. 
+	For story, this should be handled unilaterally. The creator of the game (who is also the host) is treated as a special case, and is referred to when determining story progression. 
+	For other forms of advancement, it seems reasonable for players to retain their own set of advancements. each player maintains his own records on a given dungeon. it is possible that, in a given group, beating a dungeon with 5000 gold pieces may result in some characters earning a reward (those who have never earned this level of gold on this level) while others earn nothing (those who already got the reward in a different playthrough). Similarly, players should be able to earn skill points only by defeating bosses they have not already defeated in other play-throughs.
+	

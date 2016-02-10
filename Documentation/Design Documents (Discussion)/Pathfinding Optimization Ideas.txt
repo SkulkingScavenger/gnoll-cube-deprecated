@@ -1,0 +1,26 @@
+when is the path updated?
+
+A)when a new goal is set (when the ends are invalidated)
+	Assuming the enemy is in combat while running this routine, there are three circumstances that change this.
+		1. The target_of_pursuit is no longer considered valid
+			has been out of sight for too long
+			is dead
+			deemed too hazardous to pursue (caltrops, poison gas etc.)
+		2. A more attractive target presents itself
+			
+B)when the path no longer leads to the goal (when the means are invalidated)
+	2. the short term goal has been reached
+	1. The target_of_pursuit is far from the path.
+	
+
+Idea for what to do if pathfinding is too inefficient
+
+	in the level editor, in the compilation scripts:
+	find areas that can be navigated without paths (i.e., by going straight towards a target.)
+	for each terrain_tile, expand as far as possible in all directions 
+	stop when the region cannot get larger in any direction without any tile being non-pathable from any other. 
+	then assign each tile a unique region_id
+	create objects that store each of the tiles in the region. these will be helpful for debugging and exporting;
+	once all regions have been found, iterate through each tile in each region. save 
+	
+	only execute pathfinding routines 

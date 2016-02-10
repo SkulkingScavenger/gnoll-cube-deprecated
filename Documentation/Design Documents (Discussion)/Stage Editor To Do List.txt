@@ -1,0 +1,25 @@
+TO DO List
+
+Stage Builder
+	Tileset Selector + Tileset Specific Stuff
+	Ctrl+Z Undo
+	Ctrl+Y Redo
+	enemy spawn locations
+			trap
+			single enemy(ground)
+			single enemy(air)
+			single enemy(any)
+			camp
+	Room Properties Menu
+
+The Big Seven:
+	0. hitboxes
+	1. Redo The HUD, Menu Interactions, and Keyboard System
+	2. Make Good Levels 
+	3. Make Good Enemies (requires decent levels)
+	4. Fix Shop and Dialogue (first fix menus in general)
+	5. Add Abilities (depends on enemies to have any point)
+	6. Add Skills (depends on enemies to have any point)
+	7. Redo Combat (with jumps and stabs and special moves, fix the pathing on the knives and stuff)
+	 
+Also, if you have time, you could make that witchdoctor sprite

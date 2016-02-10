@@ -1,0 +1,36 @@
+NEW SHOP MENU
+
+The idea of the list is a good one. Use the system from the Skill Menu though. don't create an individual item, let each item hold the id of an item in the inventory.
+for efficient drawing, simply set the item type, stock_count, etc. on the button
+
+RE4:
+	This menu is divided into four unequal parts:
+	1. Item List (the list form seems much maligned, so we may consider something that will make better use of the screen)
+		a scrolling list in which each bar shows the following: (Name; stock; price)
+		In RE4 there are no tabs or filters, probably because the types of goods are 75% weaponry and 20% useable
+	2. Item Preview:
+		displays a larger image of the object hovered over
+		if the item is a weapon, this box also shows the weapon's stats
+	3. Item Description
+		shows detailed information about the item itself
+	4. decorative blank space
+		kind of pointless, but pretty small anyway.
+	Controls are simple up and down, through the scroll list.
+	There is no explicit buy, switch, or back button in the UI. 
+		Instead, 'A' brings up a "do you want to buy?" dialogue with just a yes and no.
+		'B' returns to the main shop menu
+	Shop Main holds four options in a simplistic, non-wrapping, radial menu.
+		Buy
+		Sell
+		Upgrade
+		Cancel
+Bear in mind RE4 was a console game
+
+Rogue Legacy:
+	This menu works in three stages. the A(forward) and B(back) buttons are used to navigate the stages, while directional keys navigate within the current selection
+	first stage: talk to merchant
+	second stage: select tab
+	third stage: purchase/equip
+	
+Bear in mind there was no Selling or inventory system in rogue legacy. there were only a fixed quantity of items to be bought
+	

@@ -1,0 +1,10 @@
+My Idea for states like invulnerability and 
+
+Structure: 3 kinds of variables
+	Multi-Source Booleans, (true if my_bool > 0): each source adds its own value
+	Flat Modifiers: each object stores its own value, and subtracts that value when finished
+	Percentage Modifiers: 
+	
+2 kinds of effect endings:
+	end on death: info stored in mortal flesh
+	persist after death: info stored in persistent objects

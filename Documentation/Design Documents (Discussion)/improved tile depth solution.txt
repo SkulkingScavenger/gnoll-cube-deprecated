@@ -1,0 +1,34 @@
+Improved Tile Depth Solution
+decrease depth for all objects by height
+
+objects higher than other objects are drawn over them, makes sense.
+objects on the same z level have equal depth modifiers, and so cancel out.
+short objects standing in front of tall objects should still be drawn over the taller object
+	This is to say that the z value should be a tiebreaker for edge cases. it should not override foreground-background considerations
+	Or, each tile could have increasing depth the closer it is to the ground. thus a short object on the ground would have good chance of obscuring low level objects. objects high enough to override the law merit special consideration
+
+ultimately, depth is affected by background-foreground considerations, but also by which objects are on top of others. 
+An object walking over the ground should never be obscured by it. an object walking behind a cliff should never be drawn over it.
+Currently the line between these is very thin, and there is already an edge case that looks very bad. 
+
+well, actually, this has a couple of problems. as long as the depth of objects has such a fine line, this will lead to problems at the other end. tall sprites will be cut off when running against walls.
+
+We need to go into the stage editor and set tile depth to depth*5. this means that for every y, there are five layers. it gives us room to maneuver. if nothing else, we can store up to five levels of priority before allowing z to override y
+this is problematic since it means hardcoding in things like max tile depth. 
+0 = 	y*5 + 0
+64 = 	y*5 + 1
+128 = y*5 + 2
+192 = y*5 + 3
+256 = y*5 + 4
+
+of course, as long as you are consistent, the multiplier could be any number without affecting performance.
+this assumes that you change the tile destruction thing to be more precise. it must hit every tile, but skip over the areas that cannot contain tiles. this requires that tiles can be found consistently at the same latitudes. currently we have 4 main types of tiles, all of which have heights divisible by 16. 
+	for(i=0;i<room_height div 16; i+=1){
+		depth = i*16*5;
+	}
+Well, actually, if the actual tiles are adjusted based on height, then we will actually have to check between spots, effectively multiplying the number of regions to check by 5(or whatever else we do). suddenly our O(1) operation becomes an O(n) operation. 
+
+Instead of adjusting tiles, lets just open a crack where we can fit stuff, because honestly, it doesn't matter how tall an object is. its either in front of you or its behind you. the only edge case is when its under you, so what we really need is a tie breaker. we just need a tiny gap between tiles, even if its only 1 . 
+
+
+

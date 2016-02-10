@@ -1,0 +1,49 @@
+///Quadratic Bezier Curve
+for 0 <= t <= 1
+B(t) = (1-t)*((1-t)*P[0]+t*P[1]) + t*((1-t)*P[1]+t*P[2])
+I assume t is x and P[0] is a y value
+it doesn't make sense to just say t*(x1,y1); the point isn't a number.
+
+
+///Minimum Radius Solution
+//r = radius
+angleToP = initial_direction +/- 90
+P.x = Origin.x + r * cos(angleToP);
+P.y = Origin.y + r * sin(angleToP);
+
+h = point_distance(P.x,P.y,Destination.x,Destination.y);
+
+if(h < r){
+	//find out what angleTop would have to be for this to be valid
+	/*
+		r = sqrt(((Origin.x + r * cos(initial_direction +/- 90))-dest.x)^2 + ((Origin.y + r * sin(initial_direction +/- 90))-dest.y)^2)
+		r^2 = ((Origin.x + r * cos(initial_direction +/- 90))-dest.x)^2 + ((Origin.y + r * sin(initial_direction +/- 90))-dest.y)^2
+		r^2 = ((O.x-dest.x)+r*cos(I))^2 + W
+		r^2 = (O.x-dest.x)^2 + (O.x-dest.x)*r*cos(I) + (r*cos(I))^2 + W
+		r^2 = V + (O.y-dest.y)^2 + (O.y-dest.y)*r*sin(I) + (r*sin(I))^2
+		...
+		acos((-1*point_distance(O.x,O.y,dest.x,dest.y)))/r)+(O.x-dest.x) = I
+	*/
+	angleTop = acos((-1*point_distance(O.x,O.y,dest.x,dest.y)))/r)+(O.x-dest.x);
+}
+
+//Anyway...
+
+D = sqrt(h*h - r*r);
+theta = arccos(r / h);
+phi = point_dir(P.x,P.y,dest.x,dest.y);
+Q.x = P.x + r * cos(phi + theta)
+Q.y = P.y + r * sin(phi + theta)
+
+/*
+So now we have these points...
+next we check collisions between the nodes.
+first, start by making sure the line Q-Dest is pathable
+	if so, make sure the path 
+		if arc is not clear, force the character to pivot longer.
+	if not, increase the 
+
+//is the arc clear? 
+	we want this to be fast. I highly doubt that there will ever be times where there will be obstacles between the curve and the main path
+	that will not block the curve completely. consequently, we just need to check a distance = to 2*r 
+

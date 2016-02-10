@@ -1,0 +1,12 @@
+
+
+___________________________________________
+ERROR in
+action number 2
+of Destroy Event
+for object obj_gnoll:
+
+Error in code at line 4:
+       if instance_number(obj_ready) == instance_number(obj_gnoll)
+                          ^
+at position 25: Unknown variable obj_ready

@@ -1,0 +1,3 @@
+EXPORTS
+    MsgBox @1
+    Multiply @2

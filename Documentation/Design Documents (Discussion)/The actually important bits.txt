@@ -1,0 +1,12 @@
+Lets talk about something fun
+I know its probably better to focus on things that are more mundane and harder, but if I don't take a break and think about the fun stuff I'll lose motivation.
+Besides, making menus and manually programming button behaviours is grunt work. a trained monkey could do it. The only reason I have to do it is because I don't own a monkey, and wouldn't know how to train it if I had one.
+
+So here it is: we need to work on a plot, and then we need to come up with a consistent visual theme.
+
+Well, the original plot I was going with is going to happen either in the background or not in this game. We are trapped in the sandbox void between plot points. 
+Talking to NPCs is going to be less important than we thought. I wanted to do something like Knights of the Old Republic where you went on dungeons between plot points. This looks to be more like rogue legacy, where dungeons are the main event and talking to NPCs is the icing that gives it a little flavor. 
+This is a plus as far as gameplay goes, but I'm sad because I was mostly excited about telling a story. Making games takes forever, so I don't think making lots of similar games is a good solution. I want to make a couple games of different genres, but I'm not going to make two gnoll raiders. if gnoll raider is going to have a story, its going to have to have it now.
+
+Graphics Theme:
+	

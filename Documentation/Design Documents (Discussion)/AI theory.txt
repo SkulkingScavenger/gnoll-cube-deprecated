@@ -1,0 +1,34 @@
+AI THEORY
+
+So it seems that our AI is kind of jumbled. The problem lies in the fact that there are theoretically hundreds of possible combinations of situations, but most of these do not actually need to be checked. we want an AI that more or less takes care of itself, is modular, and is extensible. 
+
+We want a basic framework from which we can add and subtract subroutines.
+The framework must be more or less agnostic towards its contents, and should be easily modifiable.
+No actual computation should be done within this general schema
+
+We have considered a finite state machine, but encountered the difficulty mentioned above, namely, that there are too many possible states
+We want to find a way to delineate states that are mutually exclusive and have deterministic entrances and exits from "states" that can exist alongside others. 
+for instance, how do we classify the knockback state? this prevents many kinds of actions and affects animation, but should not completely paralyze the enemy.
+furthermore, how to classify transitions? is every transition a state in itself?
+combat is especially tricky, due to the variety of actions available
+
+The decision tree structure is much more concise, but much less flexible, not to mention unreadable.
+I am intrigued by the idea of the command stack. It has many of the features I need. 
+The command stack will require some planning though, as its operations are not as intuitive as those of the other systems.
+
+point_reachable(x,y,max_dist){
+	//modified A* algorithm. 
+	//use iso-grid as base, but add some system to account for deviations
+}
+
+shortest_path(x,y,max_dist){
+	//create path object
+	//find shortest path
+	//load points in shortest path into path object
+	//return path object
+}
+
+obj_path:
+	x_list
+	y_list
+	size

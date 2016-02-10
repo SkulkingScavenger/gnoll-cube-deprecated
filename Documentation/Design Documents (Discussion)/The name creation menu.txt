@@ -1,0 +1,28 @@
+The Name Keyboard
+	
+Keyboard Input
+	If Onscreen Keyboard is selected
+		backspace = backspace
+		shift = shift
+		enter = end
+		E = "E"
+		R = "R"
+		<- = move index left
+		-> = move index right
+	Else
+		backspace = cancel
+		E = cancel
+		R = forward
+		enter = forward
+		<- = move selection left
+		-> = move selection right
+		
+Xbox Input
+	A = press selected button
+	B = backspace
+	start = end
+	
+(0,0)...(4,0)
+:	:	:	:	:	:	:
+(0,4)...(4,4)
+(0,5)(3,5)(7,5)

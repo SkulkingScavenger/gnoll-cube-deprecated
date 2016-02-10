@@ -1,0 +1,41 @@
+While its probably too early to say for sure, I know that I don't like the existing buff/debuff systems
+
+The problem of adding and subtracting them is dealt with already on a case by case basis, but I'm a little more concerned with their application.
+For instance, what is the best way to apply a cooldown reduction for apply_poison?
+Currently, the simplest solution seems to be to directly modify the root ability object as soon as the trait/item/ability activates
+This works, but I can't stand it.
+It gets worse too. Since abilities have been abstracted out, its easy to do that sort of thing to them.
+Not so with obj_gnoll, which stores a number of sensitive local variables in addition to being the locus of many global variables.
+obj_gnolls are continuously dying and being recreated. each time all local variables are reset.
+the number of ways in which a gnoll can die are numerous. 
+I'm not looking forward to the sort of code bloat that comes with nesting objects, but I'm also not looking forward to debugging this mess
+
+Examples:
+	(Weapon Attack + Base Attack(Strength) + flat modifiers)*multiplicative modifiers = Attack;
+	
+
+Stat Decreasers
+	Decrease Speed	//is this crowd control or stat decrease?
+	Decrease Damage
+	Decrease Defense
+	Decrease Range	//maybe kind of petty
+
+Crowd Control
+	Snare: prevent movement
+	Stun: prevents movement and attacks
+	Daze: prevents everything, and stops aggro increase
+	Silence: prevents abilities (and attacks?)
+	
+Poison
+	Duration
+	Damage Per Second
+	
+Miscellaneous
+	Grievous Wounds: prevent healing
+	energy drain
+	
+	
+Application Type
+	Apply to Next Attack(regardless of whether it hits)
+	Apply To Next Hit (makes more sense for some weapons than others)
+	Create Dedicated Projectile(using attack graphics?)

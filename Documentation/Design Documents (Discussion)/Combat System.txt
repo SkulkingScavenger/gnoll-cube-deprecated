@@ -1,0 +1,36 @@
+Reforming the Combat System
+
+Movement:
+	Movement will remain as before, but will be modified to include more sophisticated interactions with the terrain in 3d space.
+	Jumping will enable the characters to clear some obstacles and evade some traps.
+	climbing: I am hoping to include abilities along the lines of grappling hooks or ladders that will allow players to traverse different kinds of terrain than they ordinarily would be able. 
+	
+Attacking:
+	the current system, in which the type of attacks possible are determined by the weapon equipped, will be retained.
+	However, it will probably be extended to effect skill selection as well.
+	
+Abilities:
+	Abilities will probably be reworked many times as we refine the other aspects of combat. We will try to keep them simple for now. this will have the additional effect of keeping the UI simple
+	
+Enemies:
+	Enemies should be complex and each fight should require some level of strategizing, either because the battle is challenging in its own right or in order to make future combats easier. 
+	Awareness: enemies are not automatically aware of the players. 
+	Camps: Some enemies will remain mostly in the same area, either guarding some objective or just loafing around. The players will have more control over when they engage these groups, but to counter this camps will be prepared to deal with many of their tactics.
+	Patrols: Some enemies will wander the dungeon or appear randomly.
+	Dynamic Enemy Behavior: Enemies should occasionally change their behavior in response to stimuli. This will vary and I am a little uncertain about the specific implementation, but I believe that this will prevent enemies from becoming 
+	
+	
+Combat Tactics:
+	Enemy Tells and Skillshots: I believe that enemies with dodgeable attacks are more generally interesting than enemies that hit infallibly. Some attacks may be significantly harder to dodge than others, and others may only be dodged by recognizing enemy tells: visible behaviors that indicate an enemy is about to use a certain attack. 
+	Enemy Weak Points: Every Enemy (with a few notable exceptions) should have a discernable front and back, and sneak attacks should be a notable aspect of the game. Larger enemies will additionally have multiple distinct parts. Even ordinary soldiers could conceivably have separate hitboxes for head and body, enabling head shots for extra damage. Bosses should invariably possess several distinct parts that can be attacked and destroyed separately.
+	Aggro System: enemies have rules for determining who to attack in the presence of multiple antagonists. the enemy will attempt to deal with the characters in the most efficient way possible, eliminating high damage or vulnerable threats quickly. However, the players can fool the AI to a certain extent. Some abilities are specifically designed to modify aggro, either minimizing the presence of a high-damage character or exaggerating the presence of a tougher but less dangerous character. attacking from cover prevents aggro increase, and enemies who are dazed do not track damage dealt while under this effect. smarter enemies are less susceptible to these tactics, while animals and orcs are easily swayed.
+
+Pre-combat Tactics
+	Terrain: Players can trivialize certain fights by making good use of terrain. Attacking melee enemies with arrows while up a cliff, or forcing large numbers of weak enemies to fight in a choke point are common examples. 
+	Stealth:
+	I hope to make the dungeon more than just a series of combat encounters by giving players some control over how combats happen. The primary instrument in this endeavor is stealth. by using stealth, breaking line of sight, and avoiding enemies through clever reconnaissance, the players can bypass enemies entirely, or else initiate a fight to their own advantage. 
+	Stealth is affected by the character's stealth attribute, the positioning of the character, the direction the enemy is facing, and lighting. The enemies will have access to torches and other forms of lighting that can be disabled or avoided. Some enemies, such as dogs, may have other senses besides sight that will alert them to nearby enemies. enemies in guard towers may be able to see enemies from a distance, and over objects that would otherwise provide cover. some enemies, particularly rakasha, are unaffected by darkness.
+	Besides local stealth, some missions will involve global stealth, particularly raids. at the beginning of a mission, the enemies will not be particularly suspicious. After the gnolls are active, the enemies will become alerted to their presence. individual enemies become alerted by sounds or sights near them, but all enemies in the dungeon will be more on guard as the gnolls are detected. furthermore, patrols and other wandering forces will converge on the locations of players who make noise.
+	Players make noise by using non-silent attacks or running into noisy traps. some barriers can be broken down, but this creates noise. enemies may sometimes raise alarms or send messengers for reinforcements. if the messengers are intercepted, the alarm can be stopped.
+	
+	

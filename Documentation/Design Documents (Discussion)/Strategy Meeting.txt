@@ -1,0 +1,92 @@
+Strategy Meeting:
+
+So, having called this meeting to order, let us discuss our next move
+Well, we have a lot of sordid affairs to be concerned with outside the game, but lets leave that alone for now.
+It seems that we are almost finished with our minimal skeleton. Almost every aspect of the game has been implemented in some form or to some degree.
+However, before we start adding new content, we need to polish what we already have. Most parts of the game are so rough as to be barely working.
+While Graphics and Level Design are two big issues, there are other things that are desperately in need of revision.
+I. The General User Interface is terrible. It needs to be revised.
+II. Enemy AI is abysmal, and needs to be completely reworked from the ground up.
+Its hard to say exactly what's missing, but things just don't seem smooth like they could be. Maybe it is the graphics.
+
+Anyway, my plan is to do things in three phases:
+	1. Establish Minimal Functionality (doesn't break the game, does basically what its meant to do)
+	2. Establish Intuitive, fluid functionality (it does everything that its meant to do, and does it right)
+	3. Add/Improve/Tweak Aesthetics (not only does it do its job, but it looks good doing it)
+	4. Add Content (Since at this point we have a standard and an established framework, every new bit of content should be taken all the way to phase 3 before being added, which is to say, don't add new enemies/classes/doodads till you have GOOD sprites for them)
+
+We only have a few things that are still in phase 1, and a couple things will be moving out of phase 2 soon. 
+Be mindful though: some things are dependant on other things. For instance, we can't add the story till we have a body of dungeons and enemies and npcs.
+Also, there's no point adding in levels and experience when the enemies don't scale (or work properly for that matter)
+
+I think that I can trace the game's most serious flaws (besides garbage graphics and general lack of content) to three main problems
+	1. Clunky User Interface (Menus are inconvenient even with a controller, abilities still not spectacular)
+	2. Terrible Levels (With our new level editor, things should go much more smoothly)
+	3. Terrible Enemy AI
+
+In addition to these three terrible things, we have three partially implemented features that need to be finished
+	1.Abilities
+	2.Skills
+	3.Shopkeeper (dialogue system can be reworked later; it "works", even if it looks worse than the rest of the game)
+
+Following is my plan for solving these problems:
+Optimizing User Interface
+	Though technically this falls under graphics, renovation of this particular aspect has been set to high priority.
+	The Existing interface actually has a negative effect on gameplay, since it can obscure exits and stuff.
+	Also, it is very outdated and no longer reflects the existing control scheme.
+	Also, its starting to hurt my eyes every time I look at the stupid block of cheese
+	
+Streamlining Menu Navigation
+	1. As much as reasonable, try to allow the user to navigate with "Back" and "Forward" commands using only the two main buttons.
+	2. To this end, we should design the menus to be nested within each other where reasonable.
+	3. This is most applicable when dealing with tabbed menus, such as inventory.
+	4. Where possible, use radial or grid menus in preference to linear menus.
+	
+Ideas For Keyboard Control Scheme
+	1. Optimize keyboard for user interaction, assume that keyboard users never even see the controller interface
+	2. Twelve Commands are divided into 3 groups of four:
+		Attack/Confirm
+		Jump/Cancel
+		Strafe
+		Pivot
+		
+		Toggle?
+		Interact
+		Stealth
+		Run
+		
+		Ability 1
+		Ability 2
+		Ability 3
+		Ability 4
+		
+	3. Four is a magic number because humans use four fingers on each hand. the thumb is only good for tapping the spacebar
+	4. We assume that users will want four contiguous buttons for movement and four contiguous functions for the other things.
+	5. It seems to me that in a game like this it is way better to change the mode rather than ask players to slide their whole hand up or down
+			first, its easy to get overwhelmed by all the buttons
+			next, having all the options pulled up simultaneously on the HUD is annoying (though we still need to keep track of cooldowns)
+			third, we have the thumb just sitting there. May as well use it, right?
+			fourth, we assume that moving one's hand around is annoying and 12 hotkeys are harder to learn than 6.
+	6. The basic set is the default, since it seems that most of the time, thats what people will want to use. 
+	7. Dilemma: Use space to scroll through modes, or revert to default when space is released?
+			Pros for universal Toggle:
+				Restricts buttons to just the five easiest manipulated buttons for optimal ergonomics
+			Cons for universal Toggle:
+				one-directional cycling means it might take two button clicks to get back to main, one of which goes through the seldom used set
+				No hierarchy of access (main is just as hard to access as non-combat)
+				potentially confusing UI: since QWER change values based on mode_index, we would need to redraw the UI, and hide other abilities
+		My instincts tell me our current plan (space and alt) is better, since we have a good idea what people want to be available by default
+	8. just 5 keys, QWER + space, allow the player to perform most of the actions
+	9. The last four abilities are trickier. toggle abilities, stealth, and sprint may be used often and in combat, but besides space there aren't any good buttons.
+	10. one option is alt, which could be used for toggling. Another would be to reserve space+R as the toggle button, with three sets of abilities. This Seems like a pretty confusing thing, and might not be worth it. Another option is to use C,V,B instead of space. this requires some thumb-wiggling, but might be the best solution. this eliminates toggle altogether. the last option would be to reserve space for toggling, but instead of toggling QWER(which has commands that need to be instantly accessible), we let ASDF control ability use. A final alternative is to use Q & R as toggleable ability sets, which would be scrolled through with Space.
+	11. A final option is to use QWER+ASDF, and allow spacebar to switch from main stuff to abilities. 
+		we assume ASDF contains less frequently used buttons like sprint and stealth, or the second bar of abilities which the player can set to what he likes. this way we have two modes: main and abilities. this is toggleable with space.
+Well, we've seen the options, and it looks like none of them are perfect. the best ones in my opinion are the CVB toggle and the QWER+ASDF
+One thing we could do to trim this down is to let sprint and stealth to be placed on the ability hotbars. normally they would be set to F and G, but they would appear in the 
+	
+	
+Option 5:
+	1:abl3, abl4
+	2:abl1, abl2
+	3:strafe, pivot
+	4:stealth, sprint

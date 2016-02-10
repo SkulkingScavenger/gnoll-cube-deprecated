@@ -1,0 +1,84 @@
+Ground Height Detection
+
+Game Engine Assumptions: 
+	the map is broken into a grid in which each space contains exactly one terrain object and each terrain object occupies exactly one grid space.
+	each terrain object has a variable "z" which determines its height. 
+
+Base Height:
+	A given character has a base height which is determined by the height of the terrain object located under the origin pixel.
+	
+Slopes: in addition to height, some kinds of terrain also have a slope, where z is the base height. for the time being, the slope of an object is determined by its mask. 
+
+find_base_height(){
+	var output, crnt_tile;
+	output = 0;
+	crnt_tile = place_meeting(x,y,obj_terrain_parent);
+	if (crnt_tile.sloped){
+		output = (crnt_tile.y - y)/2 - (crnt_tile.x - x)/4
+	}else{
+		output = crnt_tile.z;
+	}
+	return output;
+}
+
+path_walkable(max_z_difference,direction,distance){
+	/*
+	find out how far the character can move in "direction", up to "distance" without hitting a tile whose z index is more than "max_z_difference" different than the one before it. return the distance. if output == distance, the whole path is walkable. if output=0 no movement is possible in this direction.
+	Rules: no part of the collision box can intersect any part of a tile that is less than 
+	*/
+}
+
+two methods: 
+	A) exploit the isogrid
+		populate a list with every tile encountered in route to the target coordinate
+		if spd < cell_h, the maximum number of cells to check is 16. assuming the current location is valid, we eliminate up to 4.
+		if we take into account the direction, this number can be further reduced
+	B) exploit shortness of jump
+		if current location is valid and spd < cell_h, place the object directly at the new xy coordinate
+		check each of the 
+		if spd >= cell_h, the formula can be generalized by repeating the process (spd div cell_h/2) times, 
+		each time making a step of length cell_h/2
+		
+//x and y give orthographic coordinates
+//i and j give isometric coordinates
+snap to isogrid(x,y){
+	//snap_x = mouse_x - cell_w/2;
+	//snap_y = mouse_y - cell_h/2;
+	a = floor(y/cell_h - x/cell_w);
+	b = floor(y/cell_h + x/cell_w);
+	snap_x = (b - a)/2*cell_w;
+	snap_y = (b + a)/2*cell_h;
+}
+/*
+if the unit is not already aligned to the grid, the result will be a lower number than what it started with
+thus an eccentric y value is snapped north
+and an eccentric x value is snapped west
+since our goal is to find all of the four grid spaces occupied by the object, we are not interested in proper rounding
+if snap_x != x, 
+*/
+
+
+Ramp System:
+
+Ramp Area: the base tile that holds the ramp
+
+
+get_iso_line(x,y){
+	a = (x/2) - y;
+	return a;
+}
+
+get_iso_b(x,y){
+	b = (x/-2) - y;
+	return b;
+}
+
+//for NE <-> SW ramps
+get_ramp_h(x,y,target){
+	ramp_north = get_iso_line(ramp.x,ramp.y+ramp.h/2);
+	ramp_south = get_iso_line(ramp.x+ramp.w/2,ramp.y);
+	iso_h = a-b;
+	c = get_iso_line(x+w/2,y+h/2);
+	p = iso_h/c;
+	z = ramp.z+p/2;
+}

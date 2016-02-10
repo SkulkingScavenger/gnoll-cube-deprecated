@@ -1,0 +1,65 @@
+Dialogue System:
+
+Participants:
+	obj_participant: stored in participant_list
+		contains portrait, animation, text speed, position etc.
+		if crnt_speaker == id, bring to front and highlight
+	crnt_speaker:
+		noone or speaker 
+	if done talking, show options
+		
+			
+			
+case 0:
+//respond
+dlg_log = dialogue_log_append(npc_dialogue[1]);
+//determine new options
+ds_list_clear(dlg_opts);
+if mu_hp[crnt_pnum] < mu_mhp[crnt_pnum] {ds_list_add(dlg_opts,pc_dialogue[1]);}
+ds_list_add(dlg_opts,pc_dialogue[6]);
+ds_list_add(dlg_opts,pc_dialogue[7]);
+ds_list_add(dlg_opts,pc_dialogue[10]);
+ds_list_add(dlg_opts,pc_dialogue[11]);
+ds_list_add(dlg_opts,pc_dialogue[4]);
+ds_list_clear(dlg_opt_ids);
+if mu_hp[crnt_pnum] < mu_mhp[crnt_pnum] {ds_list_add(dlg_opt_ids,1);}
+ds_list_add(dlg_opt_ids,6);
+ds_list_add(dlg_opt_ids,7);
+ds_list_add(dlg_opt_ids,10);
+ds_list_add(dlg_opt_ids,11);
+ds_list_add(dlg_opt_ids,4);
+break;
+
+//Create Response Map
+lastcreated = instance_create(0,0,obj_dlg_response);
+lastcreated.npc_dialogue = npc_dialogue[1];
+lastcreated.responses = ds_list_create();
+ds_list_add(lastcreated.responses,pc_dialogue[6]);
+ds_list_add(lastcreated.response_available,true);
+ds_list_add(lastcreated.responses,pc_dialogue[7]);
+ds_list_add(lastcreated.response_available,true);
+ds_list_add(lastcreated.responses,pc_dialogue[10]);
+ds_list_add(lastcreated.response_available,true);
+ds_list_add(lastcreated.responses,pc_dialogue[11]);
+ds_list_add(lastcreated.response_available,true);
+ds_list_add(response_list,lastcreated);
+
+//response DESTROY()
+
+
+//Destroy each responss
+l = ds_list_size(responses);
+	for(i=0;i<l;i+=1){
+		with(obj){instance_destroy();}
+	}
+
+//Read Current Response
+crnt_response = ds_list_find(response_list,0);
+dlg_log = dialogue_log_append(npc_dialogue[1]);
+ds_list_clear(dlg_opts);
+ds_list_clear(dlg_opt_ids);
+for(i=0;i<ds_list_size(crnt_response.responses);i+=1){
+	if ds_list_find_value(crnt_response.response_available,i)
+	ds_list_add(dlg_opts,ds_list_find_value(crnt_response.responses,i));
+	ds_list_add(dlg_opt_ids,ds_list_find_value(crnt_response.responses,i));
+}

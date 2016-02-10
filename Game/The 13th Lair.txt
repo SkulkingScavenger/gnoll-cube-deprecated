@@ -1,0 +1,1767 @@
+ 436
+ 640
+ 128
+ 0
+ground
+ 608
+ 144
+ 0
+ground
+ 576
+ 160
+ 0
+ground
+ 576
+ 512
+ 0
+ground
+ 608
+ 528
+ 0
+ground
+ 640
+ 544
+ 0
+ground
+ 1024
+ 448
+ 0
+ground
+ 800
+ 368
+ 0
+ground
+ 864
+ 432
+ 0
+ground
+ 896
+ 448
+ 0
+ground
+ 832
+ 448
+ 0
+ground
+ 864
+ 464
+ 0
+ground
+ 832
+ 384
+ 0
+ground
+ 864
+ 400
+ 0
+ground
+ 896
+ 416
+ 0
+ground
+ 928
+ 432
+ 0
+ground
+ 896
+ 384
+ 0
+ground
+ 928
+ 400
+ 0
+ground
+ 960
+ 416
+ 0
+ground
+ 992
+ 432
+ 0
+ground
+ 992
+ 336
+ 0
+ground
+ 1024
+ 352
+ 0
+ground
+ 960
+ 352
+ 0
+ground
+ 992
+ 368
+ 0
+ground
+ 928
+ 368
+ 0
+ground
+ 960
+ 384
+ 0
+ground
+ 1024
+ 256
+ 0
+ground
+ 992
+ 272
+ 0
+ground
+ 960
+ 288
+ 0
+ground
+ 928
+ 304
+ 0
+ground
+ 960
+ 320
+ 0
+ground
+ 992
+ 240
+ 0
+ground
+ 960
+ 256
+ 0
+ground
+ 928
+ 272
+ 0
+ground
+ 896
+ 288
+ 0
+ground
+ 928
+ 208
+ 0
+ground
+ 960
+ 224
+ 0
+ground
+ 864
+ 208
+ 0
+ground
+ 896
+ 224
+ 0
+ground
+ 928
+ 240
+ 0
+ground
+ 832
+ 224
+ 0
+ground
+ 864
+ 240
+ 0
+ground
+ 896
+ 256
+ 0
+ground
+ 832
+ 256
+ 0
+ground
+ 864
+ 272
+ 0
+ground
+ 768
+ 384
+ 0
+ground
+ 800
+ 400
+ 0
+ground
+ 832
+ 416
+ 0
+ground
+ 768
+ 416
+ 0
+ground
+ 800
+ 432
+ 0
+ground
+ 736
+ 432
+ 0
+ground
+ 768
+ 448
+ 0
+ground
+ 800
+ 464
+ 0
+ground
+ 704
+ 448
+ 0
+ground
+ 736
+ 464
+ 0
+ground
+ 768
+ 480
+ 0
+ground
+ 672
+ 464
+ 0
+ground
+ 704
+ 480
+ 0
+ground
+ 736
+ 496
+ 0
+ground
+ 640
+ 480
+ 0
+ground
+ 672
+ 496
+ 0
+ground
+ 704
+ 512
+ 0
+ground
+ 608
+ 496
+ 0
+ground
+ 640
+ 512
+ 0
+ground
+ 672
+ 528
+ 0
+ground
+ 736
+ 528
+ 0
+ground
+ 768
+ 544
+ 0
+ground
+ 704
+ 544
+ 0
+ground
+ 960
+ 448
+ 0
+ground
+ 992
+ 464
+ 0
+ground
+ 1024
+ 480
+ 0
+ground
+ 928
+ 464
+ 0
+ground
+ 960
+ 480
+ 0
+ground
+ 992
+ 496
+ 0
+ground
+ 1024
+ 512
+ 0
+ground
+ 896
+ 480
+ 0
+ground
+ 928
+ 496
+ 0
+ground
+ 960
+ 512
+ 0
+ground
+ 992
+ 528
+ 0
+ground
+ 928
+ 528
+ 0
+ground
+ 960
+ 544
+ 0
+ground
+ 896
+ 544
+ 0
+ground
+ 928
+ 560
+ 0
+ground
+ 1152
+ 384
+ 0
+ground
+ 1056
+ 368
+ 0
+ground
+ 1088
+ 384
+ 0
+ground
+ 1120
+ 400
+ 0
+ground
+ 1024
+ 384
+ 0
+ground
+ 1056
+ 400
+ 0
+ground
+ 1088
+ 416
+ 0
+ground
+ 992
+ 400
+ 0
+ground
+ 1024
+ 416
+ 0
+ground
+ 1056
+ 432
+ 0
+ground
+ 1056
+ 272
+ 0
+ground
+ 1088
+ 288
+ 0
+ground
+ 1120
+ 304
+ 0
+ground
+ 1152
+ 320
+ 0
+ground
+ 1024
+ 288
+ 0
+ground
+ 1056
+ 304
+ 0
+ground
+ 1088
+ 320
+ 0
+ground
+ 1120
+ 336
+ 0
+ground
+ 1152
+ 352
+ 0
+ground
+ 992
+ 304
+ 0
+ground
+ 1024
+ 320
+ 0
+ground
+ 1056
+ 336
+ 0
+ground
+ 1088
+ 352
+ 0
+ground
+ 1120
+ 368
+ 0
+ground
+ 1088
+ 192
+ 0
+ground
+ 1056
+ 208
+ 0
+ground
+ 1088
+ 224
+ 0
+ground
+ 1024
+ 224
+ 0
+ground
+ 1056
+ 240
+ 0
+ground
+ 1088
+ 256
+ 0
+ground
+ 1120
+ 272
+ 0
+ground
+ 896
+ 192
+ 0
+ground
+ 832
+ 128
+ 0
+ground
+ 864
+ 144
+ 0
+ground
+ 832
+ 160
+ 0
+ground
+ 864
+ 176
+ 0
+ground
+ 800
+ 176
+ 0
+ground
+ 832
+ 192
+ 0
+ground
+ 768
+ 192
+ 0
+ground
+ 800
+ 208
+ 0
+ground
+ 640
+ 160
+ 0
+ground
+ 608
+ 176
+ 0
+ground
+ 672
+ 176
+ 0
+ground
+ 704
+ 192
+ 0
+ground
+ 736
+ 208
+ 0
+ground
+ 768
+ 224
+ 0
+ground
+ 800
+ 240
+ 0
+ground
+ 768
+ 352
+ 0
+ground
+ 832
+ 288
+ 0
+ground
+ 800
+ 304
+ 0
+ground
+ 768
+ 320
+ 0
+ground
+ 736
+ 336
+ 0
+ground
+ 800
+ 272
+ 0
+ground
+ 768
+ 288
+ 0
+ground
+ 736
+ 304
+ 0
+ground
+ 704
+ 320
+ 0
+ground
+ 640
+ 192
+ 0
+ground
+ 672
+ 208
+ 0
+ground
+ 704
+ 224
+ 0
+ground
+ 736
+ 240
+ 0
+ground
+ 768
+ 256
+ 0
+ground
+ 704
+ 256
+ 0
+ground
+ 736
+ 272
+ 0
+ground
+ 672
+ 272
+ 0
+ground
+ 704
+ 288
+ 0
+ground
+ 640
+ 288
+ 0
+ground
+ 672
+ 304
+ 0
+ground
+ 544
+ 176
+ 0
+ground
+ 576
+ 192
+ 0
+ground
+ 608
+ 208
+ 0
+ground
+ 640
+ 224
+ 0
+ground
+ 672
+ 240
+ 0
+ground
+ 608
+ 240
+ 0
+ground
+ 640
+ 256
+ 0
+ground
+ 576
+ 256
+ 0
+ground
+ 608
+ 272
+ 0
+ground
+ 544
+ 208
+ 0
+ground
+ 576
+ 224
+ 0
+ground
+ 544
+ 240
+ 0
+ground
+ 544
+ 464
+ 0
+ground
+ 576
+ 480
+ 0
+ground
+ 736
+ 400
+ 0
+ground
+ 704
+ 416
+ 0
+ground
+ 672
+ 432
+ 0
+ground
+ 640
+ 448
+ 0
+ground
+ 544
+ 432
+ 0
+ground
+ 576
+ 448
+ 0
+ground
+ 608
+ 464
+ 0
+ground
+ 672
+ 336
+ 0
+ground
+ 704
+ 352
+ 0
+ground
+ 736
+ 368
+ 0
+ground
+ 640
+ 352
+ 0
+ground
+ 672
+ 368
+ 0
+ground
+ 704
+ 384
+ 0
+ground
+ 608
+ 368
+ 0
+ground
+ 640
+ 384
+ 0
+ground
+ 672
+ 400
+ 0
+ground
+ 576
+ 384
+ 0
+ground
+ 608
+ 400
+ 0
+ground
+ 640
+ 416
+ 0
+ground
+ 512
+ 384
+ 0
+ground
+ 544
+ 400
+ 0
+ground
+ 576
+ 416
+ 0
+ground
+ 608
+ 432
+ 0
+ground
+ 576
+ 64
+ 64
+ground
+ 608
+ 112
+ 64
+ground
+ 512
+ 64
+ 64
+ground
+ 544
+ 80
+ 64
+ground
+ 576
+ 96
+ 64
+ground
+ 480
+ 80
+ 64
+ground
+ 448
+ 96
+ 64
+ground
+ 416
+ 112
+ 64
+ground
+ 512
+ 96
+ 64
+ground
+ 544
+ 112
+ 64
+ground
+ 576
+ 128
+ 64
+ground
+ 480
+ 112
+ 64
+ground
+ 512
+ 128
+ 64
+ground
+ 544
+ 144
+ 64
+ground
+ 448
+ 128
+ 64
+ground
+ 480
+ 144
+ 64
+ground
+ 512
+ 160
+ 64
+ground
+ 416
+ 144
+ 64
+ground
+ 384
+ 160
+ 64
+ground
+ 448
+ 160
+ 64
+ground
+ 480
+ 176
+ 64
+ground
+ 512
+ 192
+ 64
+ground
+ 416
+ 176
+ 64
+ground
+ 384
+ 192
+ 64
+ground
+ 352
+ 208
+ 64
+ground
+ 448
+ 192
+ 64
+ground
+ 480
+ 208
+ 64
+ground
+ 512
+ 224
+ 64
+ground
+ 416
+ 208
+ 64
+ground
+ 448
+ 224
+ 64
+ground
+ 480
+ 240
+ 64
+ground
+ 384
+ 224
+ 64
+ground
+ 352
+ 240
+ 64
+ground
+ 416
+ 240
+ 64
+ground
+ 448
+ 256
+ 64
+ground
+ 384
+ 256
+ 64
+ground
+ 352
+ 272
+ 64
+ground
+ 416
+ 272
+ 64
+ground
+ 384
+ 288
+ 64
+ground
+ 352
+ 304
+ 64
+ground
+ 384
+ 320
+ 64
+ground
+ 352
+ 336
+ 64
+ground
+ 416
+ 336
+ 64
+ground
+ 448
+ 352
+ 64
+ground
+ 480
+ 368
+ 64
+ground
+ 384
+ 352
+ 64
+ground
+ 352
+ 368
+ 64
+ground
+ 416
+ 368
+ 64
+ground
+ 384
+ 384
+ 64
+ground
+ 352
+ 400
+ 64
+ground
+ 448
+ 384
+ 64
+ground
+ 480
+ 400
+ 64
+ground
+ 512
+ 416
+ 64
+ground
+ 416
+ 400
+ 64
+ground
+ 384
+ 416
+ 64
+ground
+ 352
+ 432
+ 64
+ground
+ 448
+ 416
+ 64
+ground
+ 480
+ 432
+ 64
+ground
+ 512
+ 448
+ 64
+ground
+ 416
+ 432
+ 64
+ground
+ 384
+ 448
+ 64
+ground
+ 352
+ 464
+ 64
+ground
+ 448
+ 448
+ 64
+ground
+ 416
+ 464
+ 64
+ground
+ 384
+ 480
+ 64
+ground
+ 480
+ 464
+ 64
+ground
+ 512
+ 480
+ 64
+ground
+ 544
+ 496
+ 64
+ground
+ 448
+ 480
+ 64
+ground
+ 416
+ 496
+ 64
+ground
+ 480
+ 496
+ 64
+ground
+ 448
+ 512
+ 64
+ground
+ 416
+ 528
+ 64
+ground
+ 512
+ 512
+ 64
+ground
+ 480
+ 528
+ 64
+ground
+ 448
+ 544
+ 64
+ground
+ 544
+ 528
+ 64
+ground
+ 512
+ 544
+ 64
+ground
+ 480
+ 560
+ 64
+ground
+ 576
+ 544
+ 64
+ground
+ 544
+ 560
+ 64
+ground
+ 512
+ 576
+ 64
+ground
+ 608
+ 560
+ 64
+ground
+ 576
+ 576
+ 64
+ground
+ 544
+ 592
+ 64
+ground
+ 576
+ 608
+ 64
+ground
+ 608
+ 624
+ 64
+ground
+ 640
+ 640
+ 64
+ground
+ 672
+ 560
+ 64
+ground
+ 640
+ 576
+ 64
+ground
+ 608
+ 592
+ 64
+ground
+ 640
+ 608
+ 64
+ground
+ 672
+ 624
+ 64
+ground
+ 704
+ 640
+ 64
+ground
+ 736
+ 560
+ 64
+ground
+ 704
+ 576
+ 64
+ground
+ 672
+ 592
+ 64
+ground
+ 704
+ 608
+ 64
+ground
+ 736
+ 624
+ 64
+ground
+ 768
+ 576
+ 64
+ground
+ 736
+ 592
+ 64
+ground
+ 768
+ 608
+ 64
+ground
+ 896
+ 576
+ 64
+ground
+ 768
+ 640
+ 64
+ground
+ 800
+ 656
+ 64
+ground
+ 832
+ 672
+ 64
+ground
+ 800
+ 624
+ 64
+ground
+ 832
+ 640
+ 64
+ground
+ 864
+ 656
+ 64
+ground
+ 864
+ 624
+ 64
+ground
+ 896
+ 640
+ 64
+ground
+ 928
+ 656
+ 64
+ground
+ 896
+ 608
+ 64
+ground
+ 928
+ 624
+ 64
+ground
+ 960
+ 640
+ 64
+ground
+ 992
+ 560
+ 64
+ground
+ 960
+ 576
+ 64
+ground
+ 928
+ 592
+ 64
+ground
+ 960
+ 608
+ 64
+ground
+ 992
+ 624
+ 64
+ground
+ 1024
+ 640
+ 64
+ground
+ 992
+ 592
+ 64
+ground
+ 1024
+ 608
+ 64
+ground
+ 1056
+ 624
+ 64
+ground
+ 1024
+ 576
+ 64
+ground
+ 1056
+ 592
+ 64
+ground
+ 1088
+ 608
+ 64
+ground
+ 1184
+ 560
+ 64
+ground
+ 1152
+ 576
+ 64
+ground
+ 1120
+ 592
+ 64
+ground
+ 1024
+ 544
+ 64
+ground
+ 1056
+ 560
+ 64
+ground
+ 1088
+ 576
+ 64
+ground
+ 1184
+ 528
+ 64
+ground
+ 1152
+ 544
+ 64
+ground
+ 1056
+ 528
+ 64
+ground
+ 1088
+ 544
+ 64
+ground
+ 1120
+ 560
+ 64
+ground
+ 1056
+ 496
+ 64
+ground
+ 1088
+ 512
+ 64
+ground
+ 1120
+ 528
+ 64
+ground
+ 1184
+ 496
+ 64
+ground
+ 1152
+ 512
+ 64
+ground
+ 1056
+ 464
+ 64
+ground
+ 1088
+ 480
+ 64
+ground
+ 1120
+ 496
+ 64
+ground
+ 1120
+ 432
+ 64
+ground
+ 1088
+ 448
+ 64
+ground
+ 1120
+ 464
+ 64
+ground
+ 1152
+ 480
+ 64
+ground
+ 1152
+ 448
+ 64
+ground
+ 1184
+ 464
+ 64
+ground
+ 1216
+ 480
+ 64
+ground
+ 1248
+ 464
+ 64
+ground
+ 1280
+ 448
+ 64
+ground
+ 1312
+ 464
+ 64
+ground
+ 1312
+ 432
+ 64
+ground
+ 1344
+ 448
+ 64
+ground
+ 1472
+ 416
+ 64
+ground
+ 1440
+ 432
+ 64
+ground
+ 1408
+ 448
+ 64
+ground
+ 1440
+ 400
+ 64
+ground
+ 1408
+ 416
+ 64
+ground
+ 1376
+ 432
+ 64
+ground
+ 1376
+ 368
+ 64
+ground
+ 1408
+ 384
+ 64
+ground
+ 1344
+ 384
+ 64
+ground
+ 1376
+ 400
+ 64
+ground
+ 1344
+ 416
+ 64
+ground
+ 1312
+ 400
+ 64
+ground
+ 1280
+ 416
+ 64
+ground
+ 1184
+ 400
+ 64
+ground
+ 1216
+ 416
+ 64
+ground
+ 1248
+ 432
+ 64
+ground
+ 1152
+ 416
+ 64
+ground
+ 1184
+ 432
+ 64
+ground
+ 1216
+ 448
+ 64
+ground
+ 1184
+ 368
+ 64
+ground
+ 1216
+ 384
+ 64
+ground
+ 1248
+ 400
+ 64
+ground
+ 1344
+ 352
+ 64
+ground
+ 1312
+ 368
+ 64
+ground
+ 1280
+ 384
+ 64
+ground
+ 1184
+ 336
+ 64
+ground
+ 1216
+ 352
+ 64
+ground
+ 1248
+ 368
+ 64
+ground
+ 1312
+ 304
+ 64
+ground
+ 1344
+ 320
+ 64
+ground
+ 1280
+ 320
+ 64
+ground
+ 1312
+ 336
+ 64
+ground
+ 1248
+ 336
+ 64
+ground
+ 1280
+ 352
+ 64
+ground
+ 1280
+ 288
+ 64
+ground
+ 1248
+ 304
+ 64
+ground
+ 1152
+ 288
+ 64
+ground
+ 1184
+ 304
+ 64
+ground
+ 1216
+ 320
+ 64
+ground
+ 1280
+ 256
+ 64
+ground
+ 1248
+ 272
+ 64
+ground
+ 1216
+ 288
+ 64
+ground
+ 1120
+ 240
+ 64
+ground
+ 1152
+ 256
+ 64
+ground
+ 1184
+ 272
+ 64
+ground
+ 1280
+ 224
+ 64
+ground
+ 1248
+ 240
+ 64
+ground
+ 1216
+ 256
+ 64
+ground
+ 1248
+ 208
+ 64
+ground
+ 1216
+ 224
+ 64
+ground
+ 1120
+ 208
+ 64
+ground
+ 1152
+ 224
+ 64
+ground
+ 1184
+ 240
+ 64
+ground
+ 1248
+ 176
+ 64
+ground
+ 1216
+ 192
+ 64
+ground
+ 1184
+ 208
+ 64
+ground
+ 1216
+ 160
+ 64
+ground
+ 1184
+ 176
+ 64
+ground
+ 1152
+ 192
+ 64
+ground
+ 1184
+ 144
+ 64
+ground
+ 1152
+ 160
+ 64
+ground
+ 1120
+ 176
+ 64
+ground
+ 1152
+ 128
+ 64
+ground
+ 1120
+ 112
+ 64
+ground
+ 1024
+ 64
+ 64
+ground
+ 1056
+ 80
+ 64
+ground
+ 1088
+ 96
+ 64
+ground
+ 928
+ 48
+ 64
+ground
+ 960
+ 64
+ 64
+ground
+ 992
+ 80
+ 64
+ground
+ 960
+ 96
+ 64
+ground
+ 928
+ 112
+ 64
+ground
+ 896
+ 128
+ 64
+ground
+ 928
+ 80
+ 64
+ground
+ 896
+ 96
+ 64
+ground
+ 864
+ 112
+ 64
+ground
+ 832
+ 32
+ 64
+ground
+ 864
+ 48
+ 64
+ground
+ 896
+ 64
+ 64
+ground
+ 800
+ 48
+ 64
+ground
+ 832
+ 64
+ 64
+ground
+ 864
+ 80
+ 64
+ground
+ 832
+ 96
+ 64
+ground
+ 800
+ 112
+ 64
+ground
+ 800
+ 80
+ 64
+ground
+ 672
+ 48
+ 64
+ground
+ 640
+ 64
+ 64
+ground
+ 672
+ 80
+ 64
+ground
+ 608
+ 80
+ 64
+ground
+ 640
+ 96
+ 64
+ground
+ 672
+ 112
+ 64
+ground
+ 0
+ 0
+ 992
+ 112
+ 64
+door_E
+ 704
+ 64
+ 64
+door_N
+ 448
+ 288
+ 64
+door_W
+ 800
+ 592
+ 64
+door_S
+ 800
+ 336
+ 64
+startlocation

@@ -1,0 +1,76 @@
+How to handle Stealth
+
+Specs
+1. Some Enemies are better at detecting enemies than others
+2. Some Characters are sneakier than others
+3. Its possible that some enemies can see the character while others can't
+4. Its probable that if one enemy detects the character, others will too.
+5. Effectiveness of stealth depends on distance
+6. Any Randomness involved should take place in determining the Base Awareness of the spotter
+7. Potential Awareness Level and Sneakiness are theoretically limitless
+
+Detection Routine
+Step 1: establish vision radius of spotter
+Step 2: establish if LOS to target exists
+if target is in range and spotter has LOS, perform the following checks
+	Step 3: Find Spotter's Base Awareness Value
+	Step 4: Find target's Base Sneakiness Value
+	Step 5: Multiply Base Awareness Value by a factor determined by distance and target's sneakiness
+
+Step 5 is the kicker
+Our goal is to use the three values (Distance, Awareness, and Sneakiness) to find a boolean value;
+0 distance should = 100% chance of spot
+0% means outside of possible detection
+the higher the likelihood of detection, the harder it is for the skulker to hide
+since there is no theoretical cap to sneakiness or awareness, we should aim to determine minimum detection distance
+
+Simple Solution: 
+threshold = (awareness/ sneakiness)*sight_radius
+
+This implies that the threshold increases as awareness and sight_radius increase, but decreases with sneakiness
+
+Test Cases
+(10/5)*500 = 1000
+if awareness > sneakiness, the result is greater than sight range?
+Implication: if spotter has higher awareness than sneaker has sneakiness, stealth automatically fails
+stealth succeeds only by degree if greater, but spot wins completely if greater than stealth
+
+Less Simple Solution
+max threshold = sight_range
+min threshold = 0
+
+case 											:: Threshold(
+(sneakiness == 0)					:: sight_range*1.0
+(sneakiness > awareness > 0) :: sight_range*0.5
+(sneakiness == awareness) :: sight_range*0.5
+(sneakiness < awareness) :: sight_range*0.5
+(awareness == 0)					:: sight_range*0.0
+
+For a given sneakiness > 0, awareness > 0
+no matter how high sneakiness is relative to awareness, mod never equals 0
+no matter how high awareness is relative to sneakiness, mod never equals 1
+
+Well, I worked at it for a long time. 
+I found out a formula for the distribution I want, but it requires two separate formulae
+one for when sneakiness <= awareness, and one when otherwise (both work for sneakiness == awareness)
+I tried for a really, really long time to find a single function that would do the trick, but no luck
+yeah, I kept trying, but its just going to take more math than I have in me. 
+
+Anyway, 
+if S >= A
+	A/2S
+Else
+	1-(S/2A)
+	
+well, isn't it true that 2G = (A+S+abs(A-S))
+the numerator is either (2G-S) if A is greater or (A) if S is greater
+numerator is hard to account for though
+2G - S: subtract S twice the larger
+is A = 2G - S?
+A = A + S - S + abs(A-S)
+0 = abs(A-S)
+So in conclusion, we can prove that A is never = to 2G - S unless A = S
+which means there is definitely not going to be anything
+
+The underlying idea is that the greatest of the two is the denominator, and the numerator is a number from 0 to 2*greatest
+the numerator is given by S, if S is greater, or 2A - S if A is greater

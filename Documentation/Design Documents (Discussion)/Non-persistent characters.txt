@@ -1,0 +1,80 @@
+My Idea For Gnoll Raider
+
+Point one: gnoll raider uses random dungeons and random events
+Point two: gnoll raider is multiplayer and players can fail or succeed on a given dungeon.
+Point three: rogue legacy and darkest dungeon are really fun rogue-like games that feature random dungeons and random characters. I want to explore the possibility of using concepts from these games to flesh out gnoll raider.
+Conclusion: I have a plan. this is how the game will work:
+
+	Characters: 
+		Characters would not be like in D&D. instead they would be like character in Darkest Dungeon and Rogue Legacy: expendable and strategically chosen from a limited pool. This may lead to trouble with multiplayer of course...
+		Saved gamefiles include a fixed size for players. the gamefile contains a list of every character in the roster with all their stats. The gamefile contains information about each available gnoll. when you load a gamefile, each player picks their guy from the roster. the host loads the game and everyone else copies it. when people save, the save gets overwritten if it has the same name. its up to the players to make sure everyone gets their proper character, just like warcraft III. I don't think I would build any kind of conflict resolution into the game, since such things need to be solved by the team.
+		Story: Story is impersonal. it does not follow any single gnoll, since they are expendable now. This solves problems with continuity. The progression is non-linear, since dungeons and encounters are random. instead, each arc is incremented by certain landmarks.
+		Stat Progression: I would imagine that gold and treasure would be an important secondary objective in any dungeon. These can be used to upgrade the party, and its reasonable that individual gnolls would become stronger and more talented as they adventure. once again, this might be troublesome in multiplayer, since some people consider customizing and upgrading their characters to be a major part of the fun. However its quite difficult to imagine how to disperse responsibility for spending loot after a run. This isn't problematic in games like SWAT though, so its certainly possible that players will just accept things as they are.
+
+Okay, lets talk this over.
+
+I like how in these other two games you always have something to spend your money on and always have something to work towards. I especially like how, in darkest dungeon, you can be knocked back through bad play. you can painstakingly level up your perfect party to level four, then push them too far just once and lose all of them in one swoop. you keep your heirlooms, and eventually they stop being as valuable, but you spend gold at least as fast as you take it in, and you always need more. In darkest dungeon, you can go into the negatives without making the game unwinnable. you could earn 4000 gold on a failed mission, but you'll spend over 1000 provisioning your next group, and 3000 isn't going to be enough to relieve 4 fully stressed characters, let alone buy them new equipment and skills. but you start the game with less than that. worst case scenario, recruit 4 fresh guys and start over. if you don't have room, dismiss your stressed out characters. characters are free, and you "can" send your characters out without torches or food, its just a lot less likely that they'll survive/win.
+
+So...what is a "run" in gnoll raider?
+	In rogue legacy, you go on until you die or beat the entire game
+	In darkest dungeon, character death is different from whether you beat the mission. you could win after losing three guys, or quit before anyone dies.
+	In gnoll raider, you have 1-8 players, each controlling a character on a 1-to-1 correspondence. while a player's gnoll is dead, he's bored.
+	As in darkest dungeon, each dungeon is random but the length and type of the mission is determined before hand. this is different from rogue legacy, in which there is only one really big dungeon. This means you can beat one dungeon and then lose on another. 
+	So in gnoll Raider, a run is when you go on a raid. like darkest dungeon, different raids have different objectives, but end in either victory or defeat (we probably won't allow people to surrender).
+	
+What happens when you win/lose on a run?
+	In darkest dungeon, you can lose up to three characters without losing, and you can surrender any time you want without losing anyone. 
+	also, in darkest dungeon, a single "player" has a roster with dozens of characters of different classes, traits, and levels of experience. the player has gold and heirlooms, but the characters have experience.
+	In Gnoll Raider, the line between character and player is fuzzy. 
+	
+The Player - Character Relationship
+	Gnoll Raider is more of an action/strategy game and less of an RPG. you have as many characters in a party as you have players.
+	A single player is okay with having dozens of expendable characters of varying level. a group of eight players where each person has just one gnoll will be less forgiving if someone's favorite gnoll is perma-killed. Also, its reasonable to give one all-powerful player control over the whole village's funds and let him decide which of his dozen characters he wants to bestow new skills and equipment on, but less so if each gnoll is linked to to a player on a 1-to-1 basis. 
+	So, each player has their own gold and their own inventory. 
+	if thats the case, its reasonable that each player has their own character. or is it? its hard to explain in-world why some gnolls can freely share gold and items and some can't. the obvious work-around is that its the same gnoll, just with different stuff.
+	This is a little awkward for some things, like classes and levels. we could take these back out, but we won't be left with much if we do.
+	Its probably better if just avoid this altogether. Either let each player make a character and stick with it, or detach players from characters completely.
+	The first option is basically what we have right now, and isn't anything special. The second case is what we need to discuss
+	The trick is that not only do we divorce players from characters, we also divorce characters from resources.
+	For multiplayer resource expenditure, abstract it out. treasure can go to a global pool which in turn provides global benefits. For every 1000 gold, say, each player gets one extra skill-point for their character or something. 
+	So basically, the clan/warband/regiment/whatever as a whole levels up, not any single character, just like the hamlet in darkest dungeon.
+	Everyone picks their character and customizes it according to the resources available right before going into the dungeon. 
+	I'm not really sure how resource management should happen. 
+	I could automate the process, so that every landmark gives some fixed benefit, i.e. (5000 gold: unlock witchdoctor, beat boss 1: upgrade scavenge pile). Or, I could just say player 1 is the captain and gets to pick what things to upgrade. It seems awkward to divide the responsibility among an arbitrary number of players, and if players can't come to an agreement over this, then the premise of the game (cooperative multiplayer) is already out the window.
+	In gnoll raider, we won't place such harsh limits on initial character customization (it has to be fair for the players) as darkest dungeon.
+	So, probably each player will be allotted some fixed number of resources with which to build a character.
+	
+Character Persistence:
+	So, which system do we like better?
+	Version one:
+		good for people who like regular RPGs and just want to build their perfect guy and upgrade him a bunch
+		may encourage grinding unless we remove most of the standard leveling system
+		punishes people harshly for bad team composition, unless we completely take either realism, classes/levels, or strategy out of the game.
+	Version two:
+		good for people who want to strategize and come up with the perfect party
+		forces players to accept that skill (and some luck) rather than accumulated wealth is what ultimately wins the game
+		allows players to experiment freely
+	Combo?:
+		So, it seems like the real problem with version one is that classes are too important to lock anyone into forever, but too fundamental to reasonably change without completely replacing the character.
+		There's no point in classes if you aren't rewarded/punished for good/bad team composition
+		There's no point in having a persistent character if he's an elven wizard on the first dungeon and a dwarf barbarian on the next. 
+		What can we lock characters into, and what can't we?
+			Use cheap, short-term resource like gold for retraining
+			Let players choose from a pool of abilities each dungeon, but don't force them to sink resources into any individual skill
+			No classes, just equipment and abilities chosen at the beginning of each dungeon
+		Hm... it looks pretty decisive. either everyone uses a generic character anyway or uses a one-off character for each dungeon. or they restart the game because they found out that a party of 8 witchdoctors was a bad idea.
+	Conclusion:
+		Since we've already decided to make a multiplayer action-RPG, we don't have many options. I'm going to stick with permanent characters unless I decide later on that its really problematic, for two reasons.
+		A) its what I already have, so there's no cost of renovation and therefore no risk.
+		B) the only analogous game (multiplayer adventure RPG) I can think of is D&D. you "can" make a party of 4 wizards in D&D. if you decide half way through the campaign that a party of four wizards is a bad idea, you have to start a new campaign. nobody does this, but there's nothing stopping them in theory. the game does not tell you what kind of party you have to build, you can build it however you like, but if you mess up you're on your own. If this was a turn-based stat-heavy game like Darkest Dungeon, this would be too much. One game I played, final fantasy III, actually did this. for most of the game, I got by with a party of three wizards and a cleric. then I fought a boss that was immune to magic. I could have switched classes and ground back up to that level, but I decided I'd rather quit, since it wasn't that fun even under ideal conditions. However, this is less horrifying a prospect in gnoll raider, since it is at least partially an action game. if your character somehow becomes sub-optimal, you can shore it up by playing well.
+		
+		What if we took out levels and stuff? no progression except story progression. people won't miss what they've never had, and really, in a multiplayer action game, this isn't a big deal.
+	
+	
+	Another Idea:
+		What if you never played the same character twice? Each dungeon, you build/choose an entirely new character like in SWAT or DOTA
+	
+Okay, so basically, it would be cool to make a game exactly like Darkest Dungeon except that instead of being turn-based and singleplayer, you and up to three other people had to control the characters. It would be tricky, since players might start to feel ownership over their characters, and because it would have to be balanced for every party size, since you can't guarantee that there will always be four players. 
+For now, I'm a little uncomfortable changing such a basic premise of the game as persistent characters. 
+	
+	

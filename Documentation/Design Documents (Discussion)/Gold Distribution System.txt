@@ -1,0 +1,115 @@
+Gold Distribution System
+
+Between 25$ and 50% of total Gold is stored in treasure chests
+
+G = total gold amount for the dungeon
+T = treasure (between G/4 and G/2)
+C = loose money (G - T)
+n = room_count
+
+Coin Distribution
+Coins should be distributed as a bell curve
+example distribution:
+
+for n = 10:
+average = 100%/n = 10%
+increment = 10%/(n/2)
+
+room1:	2%
+room2:	4%
+room3:	6%
+room4:	8%
+room5:	10%
+
+room6:	10%
+room7:	12%
+room8:	14%
+room9:	16%
+room10:	18%
+
+//if n is even
+for(i=0;i<n/2;i+=1){
+	l_add(average - i*increment);
+	l_add(average + i*increment);
+}
+
+//if n is odd
+n = 3
+room1:	16.5%
+room2:	33%
+room3:	49.5%
++1% randomly distributed
+
+for(i=1;i<(n+1)/2;i+=1){
+	l_add(average - i*increment);
+	l_add(average + i*increment);
+}
+l_add(average)
+
+
+Once you have the list of amounts, assign each chamber its amount
+1. create a list of all rooms
+2. for each chest,
+	2a. generate a random number "num" between zero and chamber_count
+	2b. pop the chamber at num
+	2c. put the chest in that room
+
+
+
+
+Treasure:
+
+1. divide treasure amount into small chests.
+2. determine how many of each higher denomination chests appear
+small chest = 1 chest		55% of total chests
+medium chest = 2 chests	34% of total chests
+large chest = 3 chests	10% of total chests
+super chest = 4 chests	1% of total chests
+
+45% chance to be a small chest
+35% chance to be included in a medium chest or smaller
+15% chance to be included in a large chest or smaller
+5% chance to be included in a super chest or lower
+
+
+
+given 10 chests:
+
+probably 4.5 are small
+probably 3.5 are medium
+probably 1.5 are large
+probably .5 are super large
+
+0.5 div 4 = 0 super
+0.5 mod 4 = 0.5
+0.5 + 1.5 = 2
+2 div 3 = 0 large
+2 mod 3 = 2
+2 + 3.5 = 5.5
+5.5 div 2 = 2 medium
+5.5 mod 2 = 1.5
+1.5 + 4.5 = 6 small
+
+this seems like a good ratio. 
+
+Total Gold
+	Coins
+		Coins per Chamber
+	Chests
+		small
+		medium
+		large
+		super
+
+create a list of all rooms
+for each chest,
+	generate a random number "num" between zero and chamber_count
+	pop the chamber at num
+	put the chest in that room
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+So, you've found it. 
+
+
+See my gamejolt page at http://gamejolt.com/games/gnoll-raider/40566
+for the closest thing I have to an official site.
+
+I really do appreciate any suggestions, feedback, or criticism. After you've spent a certain amount of time designing something, its easy to get lost in the details, and objective, outside viewpoints are always invaluable.
+
+Feel free to judge me, since I take complete responsibility for my actions, and all the stuff I can't take responsibility for I approve retrospectively.
+
+
+
+About Gnoll Raider:
+
+	If you read the description, you already know this is a video game, and that I am independently developing it. It is a video game in which you control a man-eating hyena creature in order to brave procedurally generated dungeons in search of plunder. Mechanically, it is a top-down isometric stealth-action-rpg sort of thing (easy on the rpg bit). When I started this game I thought multiplayer was a good idea, so it has that too, if you're into that sort of thing. Characters are/will be customizable, naturally, though I'm still a little hazy on what this is going to ultimately consist of. 
+
+	Although it is still in an early stage of development, I do have some working prototypes available on gamejolt. I can't recommend playing them, since all the fun bits are still in development and the graphics are abysmal, but it does sort of give you an idea of what I've accomplished so far (or haven't). 
+
+	  Incidentally, I work on this game strictly as an amateur and have no plans to monetize it, in case you were worried about that. 
+
+Gnoll Raider follows the affairs of the Khurikash Clan during the events that took place in the Umara Region between the First and Second Yahazeer Wars. For the rest of the story, see my github page here.
+
+Game Mechanics:
+
+At its core, gnoll raider is an action/stealth game. The game consists of a series of raids undertaken by the protagonist(s). The targets of these attacks are well-defended by guards, traps, and various monstrosities, who outnumber the attackers as a general rule, and are not infrequently capable of overpowering them.  Fortunately, a gnoll is never without a few clever tricks to help swing the odds in his favor. Mind you, practically none of this is actually there yet.
+
+Stealth - The darkness is your friend: douse torches or stick to the shadows, stay behind cover, and wait until your enemy's back is turned. Care is required if you wish to avoid alerting the dungeon's inhabitants, but a sudden raid may sometimes prove more lucrative than drawn out infiltration.
+
+Upgrades - as your warband becomes more infamous, experienced, and monetarily endowed, it picks up new tactics and can afford a better education. Train to be a sneaky skulker, a crazy barbarian, or whatever you deem a good idea at the time.
+
+Wealth - Seize whatever valuables come within reach of your gnolly paws and get bonus stuff back at base. Every mission has a certain amount of treasure, and you can get it all. This is for all you a completionists out there. Mind you the levels change every time around, so good luck with that.
+
+Secret Gadgets -  Pillage your targets or trade with your fellow gnolls to acquire items of ultimate power! Poison berries, flammable oil, smoking tobacco, shiny rocks, superstitious trinkets, and bags of sand... all the classics you've come to expect from this sort of game.
+
+Eat dead stuff and conserve your energy - some dungeons are long, so be careful not to exhaust yourself recklessly. Stopping to scavenge a carcass now and again is an essential part of a healthy lifestyle.
+
+Determine the Fate of the Khurikash Clan - The missions you accept and how you handle them have consequences within the game and the story. 

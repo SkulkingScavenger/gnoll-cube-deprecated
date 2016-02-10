@@ -1,0 +1,46 @@
+///Set up Idle Mode
+the enemy should sit around his camp and do idle things.
+if the enemy is sleeping/drunk/deeply distracted, it will be treated as having a heavily reduced LOS and detection level.
+if the enemy is off guard, he will just be sitting around and doing idle things (pacing, sitting, etc.)
+enemies on patrol are never off guard.
+if the enemy is on guard, he should also be looking around. he will become alert if something occurs.
+if the enemy is on alert, he should be suspicious of things. he will investigate things that seem unusual.
+an enemy that is investigating something will move towards the object of investigation and observe it until satisfied
+if the enemy is hunting, he will scan the area, trying to find enemies
+
+when an enemy transitions from one state to another, this transition state should also be marked.
+
+
+if the enemy has a line of sight to one of more characters, he will attempt to attack the character he considers the best target.
+This decision is affected by many things (see aggro system).
+If the enemy has lost LOS to a character within a period of time (pursuit_duration), he will still be considered in combat.
+If an enemy loses sight of a character, but has LOS to another character, the enemy must decide whether he will continue hunting the character or find a new target. It seems that this could be modeled by subtracting an amount (varying by length of time the character has been out of sight) from the vanished character's aggro. if the remaining characters are still considered lower priorities, he will pursue. this automatically takes distance and stuff into account.
+An enemy pursuing a character that he has lost LOS to will try to guess where the character might have gone. 
+The longer a character has been out of sight, the less likely the NPC will try to pursue and the less accurate his guesses will be. 
+Some characters are inherently less likely to pursue than others. for instance, a stationary archer may refuse to leave his starting position.
+
+Every enemy will have different kinds of attacks, and their strategies will reflect this.
+enemies that rely entirely on melee attacks will attack whenever possible, and will focus on getting close to enemies and setting up attacks.
+enemies should attempt to dodge some attacks. The lengths to which an enemy will go to avoid taking hits will vary. some enemies will charge relentlessly until slain. others will seek primarily to avoid taking hits, attacking only when an opportunity presents itself.
+Enemies with ranged attacks or abilities will, in addition to charging and attacking, sometimes attempt to put distance between themselves and possible attackers. this distance must be calculated in terms of paths rather than actual distance. non-combatants will flee as a default course of action, and fight only when pressed. 
+
+Each enemy should maintain a list of engaged enemies (don't rely too heavily on the list of characters, since we may introduce allied npcs or henchmen later). 
+Each entry in the list should be an object. this object contains information about how the enemy sees the character.
+The most important stat (and for now, the only stat) is aggro.
+In the future, more stuff will be maintained.
+characters are added to the list when the enemy becomes aware of him (usually on gaining LOS for the first time). it is not deleted until the enemy has been out of combat for at least a little while.
+enemies should keep track of character speed and direction in order to gauge the possibility of successful pursuit.
+If a character leaves LOS, the enemy will use this information to guess their new location. their last known location will be marked.
+
+Each enemy should store an internal representation of his immediate surroundings. 
+This will be valuable for calculating paths.
+Enemies should be able to know immediately if they can reach a particular region. for instance, if characters are shooting them from up a cliff, the npc must decide if he will pursue or get out of range. if the enemy knows a path to the location, he may pursue if the distance is reasonable (if he is likely to survive the trip), otherwise he will flee.
+For simplicity, the npc should maintain a list of 
+
+storing variables between chambers:
+	once an enemy has been defined for the first time, he can store information inside his abstraction. any non-temporary data should be stored there. since abstractions are generic, it is up to the manifestation to retrieve and process this data.
+	
+Some Abilities
+suppressive fire: targets appear on the ground where arrows will hit
+
+leap: fly into the air and land on a pathable space within range.

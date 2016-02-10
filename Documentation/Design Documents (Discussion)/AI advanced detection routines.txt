@@ -1,0 +1,72 @@
+Detecting enemies by sight vs. detecting enemies by sound
+
+In real life:
+	scent works in a fixed radius and can't be avoided, tends to be shorter range than hearing (particles travel slower than sound waves)
+	hearing works in a radius that gets smaller as the target gets sneakier
+	sight works in a cone and is affected heavily by environmental variables
+
+How this works in the game:
+	Some enemies have the scent ability. These automatically detect the players no matter how sneaky they are
+		scent has limited range. it is conceivable that some environmental circumstances could negate or weaken scent (wind, nearby garbage etc.)
+	Other enemies have two senses: sight and hearing
+	you can avoid being heard by being sneaky, but the closer you are, the better your chance of being heard. 
+		enemies who are alert or otherwise have better awareness are harder to sneak up on.
+		most enemies will not enter combat without visual confirmation, so will only BECOME_SUSPICIOUS
+		the enemies hearing can be used against them to a certain extent, i.e., by creating a noise to distract a guard. this 
+	sight can be foiled by using the terrain and by avoiding LOS
+		standing at a higher elevation or behind an obstacle will break LOS
+		approaching an enemy from behind will also foil LOS
+		enemies without darkvision can only see things that are illuminated, ie, in range of a torch or fire.
+		Additionally, a character seen out of the corner of the eye (at an angle) or in dim light by a non-suspicious guard will only make the guard BECOME_SUSPICIOUS, just like hearing. 
+
+
+Pseudocode
+if (object_in_range){		//If its even worth trying
+	if(scent_smelled()){
+		get_suspicious();
+		detection_type = "scent";
+	}else if(sound_heard()){
+		get_suspicious();
+		detection_type = "hearing";
+	}else if(glimpse_caught()){
+		get_suspicious();
+		detection_type = "peripheral_vision";
+	}
+}
+
+bool scent_smelled(){
+	return object_in_range(obj,scent_radius);
+}
+
+bool sound_heard(){
+	get detection_radius from stealth-awareness formula
+	return object_in_range(obj,detection_radius);
+}
+
+bool glimpse_caught(){
+	output = false;
+	if(degree_diff(point_dir(),dir_face) <= 180){//if in range of peripherals
+		if(object_in_range(obj,peripherals)){
+			if(LOS){
+				if(illuminated(obj)){
+					output = true;
+				}
+			}
+		}
+	}
+	return output;
+}
+
+vision_range_main
+degree_difference		%modifier
+0										100
+90									25
+180									0
+
+1-(diff/360)
+
+vision_range_main
+degree_difference		%modifier
+0										75
+90									50
+180									0

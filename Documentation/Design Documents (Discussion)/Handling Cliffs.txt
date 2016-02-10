@@ -1,0 +1,68 @@
+Graphics: 
+there is a point of overlap in the north mirroring the pathing gap in the south. this corresponds to the height of the cliff
+This means that for each real (pathable) tile, the graphical tile to be walked on is offset by z/2 just like a jumping character
+in order to make it possible to walk on the edges of cliffs, we need to change the way we detect collisions with cliffs.
+currently, cliffs are simply non-pathable. we would have to change this to detection of changes in z value.
+
+Ramps:
+If we do this, we will want to introduce ramps. 
+We have two methods:
+1. break slopes into multiple objects with different heights
+2. detect sloped tiles and use math to determine height
+
+#1 is easy to program, and would work great for stairs.
+#2 is harder to program and might have bugs, but we will need to do it anyway if we want to make it look like the player is gradually ascending the slope
+
+How to make walkable cliffs: (ignore jumping)
+when checking to move into a new region, check if place is ground_pathable. walls and ramps are ground_pathable
+if pathable, check each of the up-to-four isosquares the player will be in contact with. 
+check if the difference is less than the amount the player can climb
+
+snap_to_safe(){
+	set player's x,y coordinates to the nearest isogrid spot with z <= the player's
+}
+
+terrain		D/Z
+
+ground: 	0
+stair:		16/32
+low wall:	48
+
+ramp_point_depth
+	grid constants
+	h = 32/2 = 16;
+	w = 64/2 = 32;
+	
+	/*
+	max height: i = 0;
+	
+	minimum height: i = h/2
+	
+	ramp_len: 
+		top: i=0
+		base: i = ramp_len
+	
+		x = xpos + (j)*(w) - (i)*(w);
+		y = ypos + (j)*(h) + (i)*(h);
+		
+		when h=1 and w=2:
+		x = j*2 - i*2
+		y = j + i
+		
+		How to interpret this data:
+		the above formulas give a 2D isometric grid
+		we want to find the depth at the at a given point (x,y).
+		as stated above, on a ramp, the j variable gives the horizontal component of the ramp, which we don't care about.
+		for a given x,y, find i
+			(x - j*2)/(-2) = i
+			(y-j) = i
+			x - j*2 = -2*(y-j)
+			x - 2*j + 2*y -2*j = 0
+			x + 2*y = 4*j
+			x/4 + y/2 = j
+			y/2 - x/4 = i
+		
+	*/
+
+
+
