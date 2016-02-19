@@ -27,34 +27,60 @@ room8:	14%
 room9:	16%
 room10:	18%
 
-//if n is even
-for(i=0;i<n/2;i+=1){
-	l_add(average - i*increment);
-	l_add(average + i*increment);
+if (n is even){
+	for(i=0;i<n/2;i+=1){
+		l_add(average - i*increment);
+		l_add(average + i*increment);
+	}
+}else{
+	for(i=1;i<(n+1)/2;i+=1){
+		l_add(average - i*increment);
+		l_add(average + i*increment);
+	}
+	l_add(average);
+}
+total = 0;
+for(i=0;i<n;i+=1){
+	total += l_get(i);
+}
+//if there's a problem assign the difference to a random chamber
+difference = coins - total;
+if (difference > 0){
+	num = random(chamber_count);
+	l_replace(num,l_get(num)+difference);
 }
 
-//if n is odd
-n = 3
-room1:	16.5%
-room2:	33%
-room3:	49.5%
-+1% randomly distributed
-
-for(i=1;i<(n+1)/2;i+=1){
-	l_add(average - i*increment);
-	l_add(average + i*increment);
-}
-l_add(average)
-
-
-Once you have the list of amounts, assign each chamber its amount
+Once you have the list of gold amounts, assign each chamber its amount
 1. create a list of all rooms
-2. for each chest,
+2. for each gold amount,
 	2a. generate a random number "num" between zero and chamber_count
 	2b. pop the chamber at num
-	2c. put the chest in that room
+	2c. assign the amount to that room
 
+This is the hard part, since we have to now place the gold at different locations.
+We assume gold isn't just lying around on the floor. 
+It should either be hidden in destructible doodads or enemies
+so for each room, get the list of all possible storage units
+further randomize among these.
 
+take the total number of coins in that room.
+while (total >= coin_max){
+	var num = random(coin_max);
+	if (num < coin_min){
+		num = coin_min;
+	}
+	l_add(num);
+	total -= num;
+}
+l_add(total);
+
+take the total stash locations
+assign amounts to random stash locations
+
+Problem: what if there are more gold amounts than stash locations?
+Insure that total/min < stash_locations.
+how? min = ceil(total/stash_count)
+ideally, min should be one, there should be 
 
 
 Treasure:
@@ -110,6 +136,23 @@ for each chest,
 
 
 
+Example Dungeon:
+n = 16
+G = 1600
+C = 1600*(1/4) = 400
+T = 1200
+
+average coins = 400/16 = 25
+25 doodads+enemies per room? sounds good
+
+small chest = 100 gold
+medium chest = 200 gold
+large chest = 300 gold
+super chest = 400 gold
+
+
+PROBLEM:
+We don't actually generate things like enemies and doodads until we generate the individual chambers. This is a big problem, because it means we can't make any promises about minimum unit count. forcing chambers to comply with pregenerated restrictions means that we need to do extra work in the level editor to make sure those demands can actually be met, 
 
 
 

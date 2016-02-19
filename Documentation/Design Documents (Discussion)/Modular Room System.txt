@@ -1,0 +1,22 @@
+Modular Room System
+
+In the simplest case, we have 4 quadrants
+
+Each Quadrant is loaded from a schematic, offset by its quadrant coordinates
+
+Manage the partitions:
+	Each room should come with four buffer zones, one on each side.
+	When the rooms are loaded, the buffers that intersect should be removed
+	This will lead to graphics problems if buffers are mismatched, so be really careful about this
+	
+
+Instead of loading things like doors and start locations directly, add them to a list
+when generating,
+	randomly pick one of the four start locations
+	randomly select a north door from one of the northern rooms
+	randomly select an east door from one of the eastern rooms
+	etc.
+
+Everything random is generated
+
+Then the whole thing is compiled into a chamber

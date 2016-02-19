@@ -1,0 +1,13 @@
+Projectile Dilemma:
+
+1. Eliminate straight trajectory weapons
+	All weapons fire in an arc or curve. Those that always fire straight just shouldn't be able to fire down cliffs
+
+2. Ranged Weapons can't fire down cliffs period/ Don't make cliffside fire a thing
+
+3. Ranged Weapons in the form of toggleable aimed abilities
+
+4. guess the target height
+
+
+I like number 2. The benefit of letting people shoot down cliffs is not worth the trouble. Instead of adding a complicated system to handle overly complex terrain, simplify the terrain. If you make different terrain heights, don't make it high enough to make it a problem. represent higher levels as being higher floors. In particular, don't juxtapose high altitude regions next to low altitude regions.

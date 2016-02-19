@@ -385,6 +385,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\knock_back_old_.gml</script>
     <scripts name="Game Initialization">
       <script>scripts\declare_skill_tables.gml</script>
       <script>scripts\declare_global_variables.gml</script>
@@ -455,18 +456,6 @@
       <script>scripts\gnoll_interact.gml</script>
       <script>scripts\gnoll_sprint.gml</script>
       <script>scripts\gnoll_sneak.gml</script>
-    </scripts>
-    <scripts name="AI Scripts">
-      <script>scripts\detect_stealth.gml</script>
-      <script>scripts\knock_back.gml</script>
-      <script>scripts\has_los.gml</script>
-      <scripts name="Basic Enemy Scripts">
-        <script>scripts\AI_basic_main.gml</script>
-        <script>scripts\AI_basic_combat.gml</script>
-        <script>scripts\AI_basic_transition.gml</script>
-        <script>scripts\AI_basic_idle.gml</script>
-        <script>scripts\AI_basic_ability.gml</script>
-      </scripts>
     </scripts>
     <scripts name="Chamber Schematics">
       <scripts name="Templates">
@@ -574,7 +563,6 @@
       </scripts>
     </scripts>
     <scripts name="Collisions and Physics">
-      <script>scripts\point_pathable.gml</script>
       <script>scripts\linear_path_pathable.gml</script>
       <script>scripts\snap_to_pathable.gml</script>
       <script>scripts\get_slope_z.gml</script>
@@ -588,6 +576,13 @@
       <script>scripts\get_terrain_line.gml</script>
       <script>scripts\point_in_tile.gml</script>
       <script>scripts\place_meeting_3d.gml</script>
+      <script>scripts\get_iso_area.gml</script>
+      <script>scripts\degree_difference.gml</script>
+      <script>scripts\edge_pathable.gml</script>
+      <script>scripts\nodes_in_path.gml</script>
+      <script>scripts\get_tiles_at_point.gml</script>
+      <script>scripts\point_pathable.gml</script>
+      <script>scripts\objects_in_line.gml</script>
     </scripts>
     <scripts name="Networking">
       <scripts name="read">
@@ -613,6 +608,52 @@
       <script>scripts\end_dialogue.gml</script>
       <script>scripts\count_formatted_lines.gml</script>
       <script>scripts\dialogue_block_format.gml</script>
+    </scripts>
+    <scripts name="AI Scripts">
+      <script>scripts\AI_attack.gml</script>
+      <script>scripts\AI_become_suspicious.gml</script>
+      <script>scripts\AI_engage.gml</script>
+      <script>scripts\AI_enter_combat.gml</script>
+      <script>scripts\AI_global.gml</script>
+      <script>scripts\AI_idle.gml</script>
+      <script>scripts\AI_knockback.gml</script>
+      <script>scripts\AI_main.gml</script>
+      <script>scripts\AI_pace.gml</script>
+      <script>scripts\AI_pursue.gml</script>
+      <script>scripts\AI_recover.gml</script>
+      <scripts name="AI Subroutines">
+        <script>scripts\bub_towards_point.gml</script>
+        <script>scripts\other_targets_available.gml</script>
+        <script>scripts\is_illuminated.gml</script>
+        <script>scripts\target_in_range.gml</script>
+        <script>scripts\target_clearly_visible.gml</script>
+        <script>scripts\switch_target.gml</script>
+        <script>scripts\target_is_valid.gml</script>
+        <script>scripts\strafe.gml</script>
+        <script>scripts\scent_smelled.gml</script>
+        <script>scripts\rotate_towards_direction.gml</script>
+        <script>scripts\sound_heard.gml</script>
+        <script>scripts\has_los.gml</script>
+        <script>scripts\manage_enemy_list.gml</script>
+        <script>scripts\glimpse_caught.gml</script>
+        <script>scripts\alternative_target_is_better.gml</script>
+        <script>scripts\calculate_aggro.gml</script>
+        <script>scripts\check_for_enemies.gml</script>
+        <script>scripts\close_with_enemy.gml</script>
+        <script>scripts\enemy_detected.gml</script>
+        <script>scripts\path_to_target_exists.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Convenience">
+      <script>scripts\s_push.gml</script>
+      <script>scripts\m_get.gml</script>
+      <script>scripts\s_pop.gml</script>
+      <script>scripts\m_add.gml</script>
+      <script>scripts\l_get.gml</script>
+      <script>scripts\l_clear.gml</script>
+      <script>scripts\l_add.gml</script>
+      <script>scripts\l_del.gml</script>
+      <script>scripts\l_pop.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
