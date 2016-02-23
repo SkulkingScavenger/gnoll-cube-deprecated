@@ -1,0 +1,25 @@
+Fixing the Level Editor
+Because we want to do it right this time.
+
+What Do we Want out of this?
+
+ - 1. We want simple Collisions: everything will be either solid, or not solid.
+ - 2. We want the levels to be easy to make
+ - 3. We want the levels to look good
+
+Internally, we will represent walls as impassable squares
+
+Three Layers:
+	Movement Layer: solid/non-solid
+	Vision Layer: block LoS/not block LoS
+	height Layer: tells the game how high to draw objects that are located on top of this object
+
+Movement Layer is used most often, so it will be simple. when exporting, export the list of pathing blocker objects to be generated. 
+
+Because of Complications inherent in dealing with vision and height, lets just try to avoid using these too often. 
+
+Role of Tiles: some walls are best represented by tiles. However, some objects will be represented by custom sprites, so not all cells will generate tiles.
+
+Half-cells: because of the way the cells are set up, ie, on an isometric grid, there is no way to make a straight North-South Wall. instead, a zig-zag pattern is created. So far, this hasn't been a big problem. If we want to allow for straight walls, we need to consider either the possibility of half-tiles, or the use of rectangular pathing for moving objects (so that they encounter zigzag walls as if they were solid.)
+
+For the time being, I'd rather use square pathing. now that we aren't using advanced collision checking, it doesn't make a big difference to me what kind of pathing the people use, and its probably more efficient anyway.

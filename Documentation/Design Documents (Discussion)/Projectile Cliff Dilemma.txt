@@ -5,9 +5,13 @@ Projectile Dilemma:
 
 2. Ranged Weapons can't fire down cliffs period/ Don't make cliffside fire a thing
 
-3. Ranged Weapons in the form of toggleable aimed abilities
+3. Ranged Weapons exist only in the form of toggleable aimed abilities 
 
-4. guess the target height
+4. guess the target height/ change targeting system to calibrate z-direction like in wc3
 
 
-I like number 2. The benefit of letting people shoot down cliffs is not worth the trouble. Instead of adding a complicated system to handle overly complex terrain, simplify the terrain. If you make different terrain heights, don't make it high enough to make it a problem. represent higher levels as being higher floors. In particular, don't juxtapose high altitude regions next to low altitude regions.
+
+I like number 2. The benefit of letting people shoot down cliffs is not worth the trouble. Instead of adding a complicated system to handle overly complex terrain, simplify the terrain. If you make different terrain heights, don't make it high enough to make it a problem. represent higher levels as being higher floors (stairways = doors). In particular, don't juxtapose high altitude regions next to low altitude regions. 
+If you want to make regions that simulate "higher ground", make kill holes in walls, and don't make the floors so high that it looks weird when the arrows hit targets far below them. you've got some leeway, since most enemies are at least 64 pixels high and arrow sprites are usually at least 16 pixels, so you have a full range of 96. if walls are 32 px high, you've got three levels to play with. 
+
+alternatively, allow cliff detection

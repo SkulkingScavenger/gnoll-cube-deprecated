@@ -361,3 +361,19 @@ End Date: 02/20/2016
 	 - Implement camp AI
 	 - implement dynamic group creation
 	 - create variant AI for wandering monsters and special enemies
+	Conclusion: Well, we had a bunch of goals at the beginning, but after we started tinkering with the terrain and the level editor, we decided to just scrap the whole thing and start fresh. So what actually ended up happening this sprint was a lot of graphics stuff. We made a complete run cycle for the rakasha warrior (EE), and made a ton of terrain improvements. We did some theoretical work with the gold system, but that doesn't really count so much. Ironically, though we made no progress towards feature completeness, we probably have more to show from this sprint than any other.
+	
+### Sprint 12:
+Start Date: 02/21/2016
+End Date: 03/05/2016
+ - 1. Complete at least one Dungeon
+	 - set up the overworld map better than it is (show information and stuff)
+	 - set up the dungeon generation algorithm to include things like minibosses, bonus objectives, gold count etc.
+	 - put the staircase back in
+	 - create a victory indicator or something
+ - 2. Create Functioning Mission Briefing
+	 - create character portraits
+	 - response system
+	 - revise dialogue menu
+ - 3. Improve Menus Again
+	 - mostly just make them not look so terrible.
