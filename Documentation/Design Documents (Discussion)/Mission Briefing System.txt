@@ -1,0 +1,8 @@
+Mission Briefing System
+
+For the time being, we will use a placeholder, as a full mission briefing is about as graphically intensive as a cinematic. 
+Essentially, The Mission Briefing is a graphic script that is displayed to the player, explaining what the next mission is about. Usually, there will be multiple missions, and these will be described to the player. 
+
+The Player may (possibly) ask questions and/or participate in the discussion, though at this point its hard to say what effect this should have (possibly curry favor with a faction?)
+
+This will function like a discussion with many participants

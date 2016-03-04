@@ -152,7 +152,13 @@ super chest = 400 gold
 
 
 PROBLEM:
-We don't actually generate things like enemies and doodads until we generate the individual chambers. This is a big problem, because it means we can't make any promises about minimum unit count. forcing chambers to comply with pregenerated restrictions means that we need to do extra work in the level editor to make sure those demands can actually be met, 
+We don't actually generate things like enemies and doodads until we generate the individual chambers. This is a big problem, because it means we can't make any promises about minimum unit count. forcing chambers to comply with pregenerated restrictions means that we need to do extra work in the level editor to make sure those demands can actually be met. 
+If we keep going in this direction, we are going to have to face the fact that actual distribution will be handled at room-generation. Its possible that there is significantly more gold than there are containers in a given room, leading to loaded barrels and stuff. Is this a good thing or a bad thing? its hard to say. 
+Alternatively, we could rely almost entirely on chests for bonus objectives, maybe have gold spawn randomly for some other purpose.
+
+IDEA: 
+	Suppose Chests are scattered around the level, but are heavily guarded by default. Getting every chest in the level guarantees success, but is almost impossible in practice due to limited resources.
+	Gold coins scattered around the level are a random variable. every 100 gold or so is equivalent to a treasure chest. On average, such coins are found in such small quantities that it takes many chambers worth of coins to make the same amount as a treasure chest. However, ultimately a thorough coin-scrounging coupled with good luck does little besides eliminate the need to rigorously track down the last couple of chests.
 
 
 

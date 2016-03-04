@@ -8,6 +8,7 @@ Manage the partitions:
 	Each room should come with four buffer zones, one on each side.
 	When the rooms are loaded, the buffers that intersect should be removed
 	This will lead to graphics problems if buffers are mismatched, so be really careful about this
+	Ultimately, we will need to keep the edges of the modules consistent, at least enough 
 	
 
 Instead of loading things like doors and start locations directly, add them to a list
@@ -20,3 +21,4 @@ when generating,
 Everything random is generated
 
 Then the whole thing is compiled into a chamber
+
