@@ -23,3 +23,4 @@ Role of Tiles: some walls are best represented by tiles. However, some objects w
 Half-cells: because of the way the cells are set up, ie, on an isometric grid, there is no way to make a straight North-South Wall. instead, a zig-zag pattern is created. So far, this hasn't been a big problem. If we want to allow for straight walls, we need to consider either the possibility of half-tiles, or the use of rectangular pathing for moving objects (so that they encounter zigzag walls as if they were solid.)
 
 For the time being, I'd rather use square pathing. now that we aren't using advanced collision checking, it doesn't make a big difference to me what kind of pathing the people use, and its probably more efficient anyway.
+
