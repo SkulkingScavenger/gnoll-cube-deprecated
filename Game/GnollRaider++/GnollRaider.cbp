@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="allegro" />
+		<Option title="GnollRaider" />
 		<Option execution_dir="C:/Users/Sean/Projects/allegro/" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
@@ -27,25 +27,6 @@
 				<Linker>
 					<Add option="-static-libgcc" />
 					<Add option="-static-libstdc++" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_acodec-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_audio-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libvorbisfile-1.3.2-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libvorbis-1.3.2-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_color-5.0.10-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_dialog-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_font-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_image-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_memfile-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_physfs-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_primitives-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\liballegro_ttf-5.0.10-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libdumb-0.9.3-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libFLAC-1.2.1-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libfreetype-2.4.8-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libogg-1.2.1-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libzlib-1.2.5-static-mt.a" />
-					<Add library="C:\Users\Sean\Downloads\allegro-5.0.10-mingw-4.7.0\lib\libopenal-1.14-static-mt.a" />
 					<Add library="C:\MinGW\lib\libgdiplus.a" />
 					<Add library="C:\MinGW\lib\libuuid.a" />
 					<Add library="C:\MinGW\lib\libkernel32.a" />
@@ -61,6 +42,26 @@
 					<Add library="C:\MinGW\lib\libadvapi32.a" />
 					<Add library="C:\MinGW\lib\libws2_32.a" />
 					<Add library="C:\MinGW\lib\libshlwapi.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-monolith-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_physfs-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_ttf-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_primitives-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_dialog-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_memfile-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_image-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_font-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_color-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_acodec-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro_audio-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libdumb-0.9.3-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libFLAC-1.2.1-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libfreetype-2.4.8-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libogg-1.2.1-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libvorbisfile-1.3.2-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libvorbis-1.3.2-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libopenal-1.14-static-mt.a" />
+					<Add library="lib\allegro-5.0.10-mingw-4.7.0\lib\libzlib-1.2.5-static-mt.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -79,7 +80,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../../../allegro/Untitled1.cpp" />
+		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
