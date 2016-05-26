@@ -44,14 +44,14 @@ if (!strafing && !stunned){
 //yspd = lengthdir_y(crnt_spd,dir_move);
 //if conditions permit, move desired amount
 if (!pivoting && !snared && !channeling && !stunned && controlling_player == crnt_pnum && !instance_exists(obj_menu_parent)){
-  if (point_pathable(x+xspd,y+yspd,max_diff) || aerial_point_pathable(x+xspd,y+yspd)){
+  if (point_pathable(x+xspd,y+yspd,2) || aerial_point_pathable(x+xspd,y+yspd)){
     x += xspd;
     y += yspd;
   }else{
     //move as far as possible in the desired direction
     move_contact_nonpathable(dir_move,crnt_spd,max_diff);
     //move_contact_all(dir_move,crnt_spd);
-    if (!point_pathable(x+xspd,y,max_diff) && !aerial_point_pathable(x+xspd,y)){
+    if (!point_pathable(x+xspd,y,2) && !aerial_point_pathable(x+xspd,y)){
       move_contact_nonpathable(270+sign(xspd)*90,xspd,max_diff);
       //move_contact_all(270+sign(xspd)*90,xspd);
       xspd = 0;

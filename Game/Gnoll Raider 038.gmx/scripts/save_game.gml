@@ -10,7 +10,7 @@ write_header(argument0);
 savefile = file_text_open_write(working_directory + "profiles\" + string(argument0) + ".txt");
 file_text_write_string(savefile,pname[crnt_pnum]);
 file_text_writeln(savefile);
-file_text_write_string(savefile,mu_class[crnt_pnum]);
+file_text_write_real(savefile,mu_class[crnt_pnum]);
 file_text_writeln(savefile);
 file_text_write_real(savefile,mu_spr[crnt_pnum]);
 file_text_writeln(savefile);

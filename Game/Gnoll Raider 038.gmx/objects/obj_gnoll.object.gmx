@@ -35,7 +35,7 @@ base_z = 0;
 w = 64;
 h = 32;
 d = 64;
-max_diff = 16;
+max_z_diff = 16;
 dir_move = 270;
 dir_face = 270;
 strafing = false;
@@ -638,6 +638,10 @@ if (sneaking){
 }else{
   draw_sprite(sprite_index,-1,x,y-(z/2)-40);
 }
+
+draw_text(x,y-100,string(crnt_spd));
+draw_text(x+100,y-100,string(point_pathable(x,y,2)));
+
 </string>
           </argument>
         </arguments>

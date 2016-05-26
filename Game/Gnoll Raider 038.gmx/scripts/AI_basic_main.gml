@@ -1,17 +1,7 @@
-switch (state){
-// Out of Combat
-case "idle": //idle/sleeping
-  //If enemy in range, change state
-  break;
-case "alert": //alert/patrol
-  break;
-case "hunting":
-  break;
-// In Combat
-case "combat":
-  AI_basic_combat();
-  break;
-// Death
-case "dead":
-  break;
-}
+var scr;
+//general upkeep;
+AI_global();
+
+//run top script;
+scr = ds_list_find_value(cmd_stack,ds_list_size(cmd_stack)-1);
+script_execute(scr);

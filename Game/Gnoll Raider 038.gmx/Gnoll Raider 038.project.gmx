@@ -617,7 +617,7 @@
       <script>scripts\AI_global.gml</script>
       <script>scripts\AI_idle.gml</script>
       <script>scripts\AI_knockback.gml</script>
-      <script>scripts\AI_main.gml</script>
+      <script>scripts\AI_basic_main.gml</script>
       <script>scripts\AI_pace.gml</script>
       <script>scripts\AI_pursue.gml</script>
       <script>scripts\AI_recover.gml</script>
@@ -640,7 +640,7 @@
         <script>scripts\calculate_aggro.gml</script>
         <script>scripts\check_for_enemies.gml</script>
         <script>scripts\close_with_enemy.gml</script>
-        <script>scripts\enemy_detected.gml</script>
+        <script>scripts\AI_enemy_detected.gml</script>
         <script>scripts\path_to_target_exists.gml</script>
       </scripts>
     </scripts>

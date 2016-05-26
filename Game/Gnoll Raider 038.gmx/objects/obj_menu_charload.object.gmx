@@ -36,7 +36,7 @@ if (directory_exists(working_directory+"profiles")){
     loadname[0] = file_text_read_string(crnt_file);
     file_text_readln(crnt_file);
     loadsprite[0] = file_text_read_real(crnt_file);
-    file_text_open_read(crnt_file);
+    file_text_readln(crnt_file);
     loadrank[0] = file_text_read_string(crnt_file);
     //file_text_readln(crnt_file);
     //loadgold[0] = file_text_read_real(crnt_file);

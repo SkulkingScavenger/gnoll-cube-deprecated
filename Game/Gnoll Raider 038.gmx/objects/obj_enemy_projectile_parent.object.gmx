@@ -39,7 +39,7 @@ if (controlling_player == crnt_pnum){
       image_blend = c_orange;
       alarm[1] = 5;
       //take knockback
-      knock_back(other);
+      AI_knockback(other);
       mu_move();
     }
   }

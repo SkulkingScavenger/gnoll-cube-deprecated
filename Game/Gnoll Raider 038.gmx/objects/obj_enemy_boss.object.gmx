@@ -369,6 +369,8 @@ atk_ready = true;
             <kind>1</kind>
             <string>///Artificial Intelligence Script
 
+
+/*
 var enemy_detected, dest_x, dest_y, interrupted;
 interrupted = false;
 
@@ -396,7 +398,7 @@ case 0: //idle
         target = pchar[i];
       }
     }
-    */
+    *//*
     behavior = 1;
   }else{
     //wander,look around,nothing

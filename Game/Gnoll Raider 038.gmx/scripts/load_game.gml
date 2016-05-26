@@ -4,7 +4,7 @@ if file_exists(working_directory + "profiles\" + argument0){
   loadfile = file_text_open_read(working_directory + "profiles\" + argument0)
   pname[crnt_pnum] = file_text_read_string(loadfile)//Character Name
   file_text_readln(loadfile);
-  mu_class[crnt_pnum] = file_text_read_string(loadfile)//Class
+  mu_class[crnt_pnum] = file_text_read_real(loadfile)//Class ID
   file_text_readln(loadfile);
   mu_spr[crnt_pnum] = file_text_read_real(loadfile) //Sprite Index
   file_text_readln(loadfile);

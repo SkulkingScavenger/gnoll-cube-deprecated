@@ -13,7 +13,7 @@ if(damaged){
   s = 1;
   for(i=0;i<s;i+=1){
     obj = enemies[i];//need to replace this with something more sophisticated later
-    if(enemy_detected(obj)){
+    if(AI_enemy_detected(obj)){
       //become suspicious
       l_pop(cmd_stack);
       l_add(cmd_stack,AI_become_suspicious);

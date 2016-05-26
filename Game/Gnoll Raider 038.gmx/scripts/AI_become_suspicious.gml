@@ -15,7 +15,7 @@ for(i=0;i<s;i+=1){
     l_add(enemy_data,lastcreated);
   }else{
     //turn towards source of disturbance 
-    if (enemy_detected(obj)){//check again;
+    if (AI_enemy_detected(obj)){//check again;
       switch (detection_type){
       case("scent"):
         //you can smell him. you know he's there. so hunt him down "go go go!" "arf! arf! arf!"

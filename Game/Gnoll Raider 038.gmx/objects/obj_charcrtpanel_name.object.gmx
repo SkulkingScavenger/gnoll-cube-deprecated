@@ -341,14 +341,14 @@ if (keyboard_check(vk_backspace)){
 ///check arrowkeys
 //move index left
 if(arrow_left){
-  if(text_ind &lt; string_length(namestr)){
-    text_ind += 1;
+  if(textind &lt; string_length(namestr)){
+    textind += 1;
   }
 }
 //move index right
 if(arrow_right){
-  if(text_ind &gt; 0){
-    text_ind -= 1;
+  if(textind &gt; 0){
+    textind -= 1;
   }
 }
 
