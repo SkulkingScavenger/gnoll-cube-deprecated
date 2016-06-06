@@ -1,0 +1,35 @@
+Individual Alertness
+	0: just another night on the wall
+		patrols as usual, casual approach to unusual things
+	1: thought I heard something...
+		casual investigation, pays attention to unusual things
+		if nothing turns up, reverts to stage 0
+	2: Something Strange is going on...
+		somewhat suspicious, looks for unusual things
+		prepared for unexpected stuff
+	3: Something's over there!
+		suspicious, active investigation
+		prepared for the unexpected
+		reverts to stage 2
+	4: We've been infiltrated!
+		knows hostile forces are present, highly suspicious
+	5: Its nearby!
+		believes enemy is nearby, prepared for combat
+	6: It's over there!
+		Presumes enemy is in specific area, attacks blindly
+		reverts to stage 5
+
+Global Alertness
+	0: no alarm
+		everything proceeds as normal
+	1: infiltrators detected: stop the skulking filth!
+		additional reinforcements deployed to patrol the area
+		base-wide suspicion increased: suspicious
+	2: security breach: the gnolls have infiltrated the base!
+		extra reinforcements deployed to watch check points
+		royal guard is arriving
+		base-wide alertness increased: high alert
+	3: lockdown: We are under attack! arm yourselves!
+		further reinforcements deployed to contain the invasion
+		kill-teams deployed to sweep the map
+		base-wide alertness increased: prepared for battle
