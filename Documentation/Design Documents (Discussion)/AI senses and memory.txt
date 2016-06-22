@@ -1,0 +1,92 @@
+Immediate Vision
+	cleared each round
+	objects that might requirements are remembered
+
+
+Memory:
+	list of objects any objects seen or heard
+	3 lists: 
+		nearby objects
+		hostiles
+		suspicions
+
+Memory object
+	does not carry over between chambers
+	stores an object type (might not be accurate)
+	stores coordinates
+	stores degree of awareness
+		0: NULL (not aware, remove from list)
+		1: suspicion (sound, movement, peripheral vision)
+		2: seen but obscure (fog, darkness, partial cover, loud sound)
+		3: clearly seen (direct sight, studied obscure object)
+	stores length of time since target was last seen/heard
+
+Discussion:
+	What we want is for the AI to find out everything it needs to know about its environment during the "sense" phase, so that we only need to check state variables during the behavior phase.
+	The question then is what kind of information do we need? currently, the AI has a few activities:
+		normal idle behavior (patrol/pace/wander/standby)
+		stop/pivot to look at something
+		walk over to investigate
+		blind attack/aggressive investigate (call for help, shoot blindly, charge)
+		full combat
+	Intuitively, we assume the AI needs clear vision for full combat. even the loudest sound won't let them pinpoint the position, so at best they can attack blindly. if the unit is close enough for the sound to make it obvious, the false sight radius should make this work.
+	the investigative phase depends on how suspicious the guard is in general (seperate subject)
+	Behavior is effected by a lot of other things, like global awareness, camp awareness and the guard's mental state. That means we can't boil it down to a behavior during the sense phase
+	How much do we need to know?
+		is it clearly visible? -> no further checks needed
+		is it visible at all?
+			is it moving? -> no further checks needed
+			-> unknown, non-moving object
+		is it audible?
+			could it be a natural sound? -> normal sound
+			could it be another guard? -> suspicious sound
+			-> alert!
+			
+	We have to treat sounds differently it seems. sounds designate regions, not objects.
+	Lets stick with vision for now. 
+		0: Not Visible
+		1: Unknown Object
+		2: Unidentified Moving Object
+		3: Identified Object
+	These are used for determining objects_seen, not objects remembered.
+	These are non-subjective. the AI can either see them or it can't, regardless of its mental state.
+	
+	Once all raw sensory data has been evaluated, determine what the AI actually learns from it.
+	all clearly visible objects are checked against the memory. 
+	sounds and indistinct objects are added as suspicions
+	
+	In advanced cases, the AI might check if objects have been moved/added/removed/destroyed/changed
+	In more basic cases, the AI just adds any hostiles to his list of entities.
+	
+	Suspicions 
+	
+	We need a way to remember things vaguely, such as "a" gnoll at some time, vs. a particular instance of a gnoll. the AI should not be able to tell if an object was replaced by an identical object just because the ids differ. 
+	For practical purposes, the AI should be dumb enough to only notice distinct changes, i.e., torch was lit, but now isn't, door was closed and is now open, blood/bodies on the floor, etc. 
+	distinguishing between an object being moved/removed/added would require a lot of work and probably wouldn't add much.
+	remember that this shouldn't just be about making it easier to be found, it has to cut both ways. players can make guards investigate things. 
+	This could probably be simplified with routines like "relight torch" and "freak out at bodies/blood". keeping track of open chests/doors just punishes players for not clearing out all the guards before opening them. chests are reasonable, doors not so much. broken objects should be suspicious, to punish players for using brute force. incidentally, there's never a reason to leave a door or chest in any other condition than how its found, so if its an issue its probably better for players to handle it automatically.
+	memory will be more useful for remembering suspicions and escaped players.
+	
+	Do we need a way to tell if an object has been continuously in range?
+	suspicions should have a timer, after which they expire
+	similarly, positively identified threats should remember how long ago they were seen, so the AI can decide if its worth pursuing, but never actually forget they were there.
+	
+	When dealing with objects like torches and bodies, what do we need to know for behavior?
+	We assume nearby hostiles and suspicions trump normal objects.
+	positively identified non-organic objects should be classified as interesting or non-interesting.
+	interesting objects are bodies, destroyed destructibles, and sources of illumination. might also include deliberate diversions. 
+	the idea is that the objects aren't suspicious: they're obviously not gnolls, but the AI still wants to interact with them for some reason. torches need to be lit, bodies need to be identified, destructibles need to be checked to see how they broke (was it an accident?), ale needs to be drunk, etc.
+	in case of smashed doors and bodies (obvious signs of hostile activity), interaction might not require investigation, just a hue and cry for a sweep of the area.
+	
+EXAMPLE 1
+
+	guard is in a room.
+	
+	in plain sight is an unlit torch and a broken chest
+	to the side is a gnoll, he is covered in darkness
+
+	maintenance: add 1 to the time_elapsed to each nearby object
+	add unlit torch and broken chest to the list of objects seen, with vision rating 3
+	gnoll is in darkness but close by, add to list of objects seen with vision rating 2
+	
+	

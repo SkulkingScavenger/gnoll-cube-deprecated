@@ -1,0 +1,97 @@
+The Cone of Vision
+
+Abstract:
+	3 kinds of objects
+		unobscured
+		obscured and moving
+		obscured and still
+	2 degrees of detection
+		detected
+		identified
+	4 attributes of cones
+		range: physical limits of sight
+		width: how wide the cone is
+		motion_sensitive: whether the cone detects only moving objects (cannot identify)
+		darkvision_rating: impact of darkness on physical limits of sight
+	4 cones
+		direct: 45 degrees, long range, low darkvision
+		side: 90 degrees, mid range, low darkvision
+		peripheral motion: motion only, 180 degrees, short range, mid darkvision
+		false sight: motion only, 360 degrees, very short range, high darkvision
+
+detected vs. identified
+	it is possible to see something without being able to tell what it is.
+	detection means there is some visual feedback about an object. what the AI does about it depends on context
+	identification means that an object has been positively identified (at least in the mind of the AI)
+	
+	if an object is out of range or behind a solid obstacle, he cannot be detected
+	if an object is far away, but still in range, and/or is behind partial cover
+
+motion vs. still
+	cones are either set to detect motion or light. 
+	motion sensitive cones cannot identify objects, only detect them.
+	!!! motion sensitive cones may distinguish between slow movement and sudden movement
+	suspicions that arose from visual movement are marked as moving.
+	
+
+obscured vs. unobscured
+	an object is obscured if it has partial cover, either partially behind a wall or behind an object that is not completely solid. 
+
+light vs. dark
+	every unit has a darkvision rating between 0.00 and 1.00 (0% and 100% respectively)
+	which can be modified globally by dungeon settings
+	currently we are treating illumination as boolean (no gradients)
+	the length of the darkvision is equal to length*darkvision
+	when checking visibility, either the light or dark values are used, for illuminated or unilluminated targets
+	thats really all there is.
+	
+EXAMPLE
+	given a darkvision rating of 0.5 an object that can be detected in full illumination at 1000 pixels can be detected in darkness at 500 pixels.
+	
+	bats and other echolocators have 1.00
+	orcs and goblins have about 0.75
+	cats (rakasha) have about 0.50
+	humans have about 0.25
+	loxodon have about 0.10
+	
+	NOTE: motion-sensitive peripheral cones perform relatively better in the dark (should not exceed normal detection range). they tend to have a darkvision about 1.5 times greater than normal cones
+	false sight detection should have full darkvision
+	
+0	1024,45,0.50,false
+1	768,90,0.50,false
+2	896,90,0.75,true
+3	384,180,0.75,true
+4	32,360,1.00,true
+
+Rakasha: Detection (unobscured)
+			Light			Dark
+main	1024			512(0.50)
+simo	768				576(0.75)
+side	768				384(0.50)
+peri	384				288(0.75)
+back	32				32 (1.00)
+	
+Rakasha: Detection (obscured object)
+			Light			Dark
+main	512				256(0.50)
+simo	384				288(0.75)
+side	384				192(0.50)
+peri	128				96 (0.75)
+back	16				16 (1.00)
+
+Rakasha: Identification (unobscured object)
+			Light			Dark
+main	512				256
+simo	 - 				 - 
+side	384				192
+peri	 - 				 - 
+back	 - 				 - 
+
+Rakasha: Identification (obscured object)
+			Light			Dark
+main	256				128
+simo	 - 				 - 
+side	192				96
+peri	 - 				 - 
+back	 - 				 - 
+	

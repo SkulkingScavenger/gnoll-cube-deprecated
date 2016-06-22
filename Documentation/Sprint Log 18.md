@@ -44,5 +44,18 @@ Date: 05/24/2016
 
 Day 11 Scrum Meeting:
 Date: 05/25/2016
+ - Graphics
+
+Day 12 Scrum Meeting:
+Date: 05/26/2016
+ - Graphics
+
+Day 13 Scrum Meeting:
+Date: 05/27/2016
+ - keyboard configuration
+
+Day 14 Scrum Meeting:
+Date: 05/28/2016
+ - worked on level load system
 
 
