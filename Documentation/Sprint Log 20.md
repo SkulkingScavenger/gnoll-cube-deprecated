@@ -49,17 +49,21 @@ Day 10 Scrum Meeting:
 Date: 06/21/2016
  - 
 
-Goals for 06/21/2016
-	O	test idle behaviors
-	O	AI can attack
-	O	get AI sense and memory off the ground
-	
-Goals for Sprint 20: Complete the Prototype
-	modular room generation (with at least 2 available modules)
-	functioning AI sense simulation
-	Node-based AI navigation
-	entertaining combat vs AI
-		charge
-		AoE attacks w/ delay & tells
-		knockback/stun
-	
+Day 11 Scrum Meeting:
+Date: 06/22/2016
+ - 
+ 
+Day 12 Scrum Meeting:
+Date: 06/23/2016
+ - made some sprites
+
+Day 13 Scrum Meeting:
+Date: 06/24/2016
+ - binge-watched deathnote till 4:00 in the morning
+
+Day 14 Scrum Meeting:
+Date: 06/25/2016
+ - continued binge-watching deathnote
+ - relatives & social obligations
+
+
