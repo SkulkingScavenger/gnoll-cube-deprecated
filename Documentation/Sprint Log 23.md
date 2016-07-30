@@ -14,6 +14,19 @@ Day 3 Scrum Meeting:
 Date: 07/26/2016
  - worked on the grails app
 
+Day 4 Scrum Meeting:
+Date: 07/27/2016
+ - worked on the grails app, learning vim and intellij etc.
+ 
+Day 5 Scrum Meeting:
+Date: 07/28/2016
+ - worked on plague trooper graphics
+
+Day 6 Scrum Meeting:
+Date: 07/29/2016
+ - worked on terrain and plague trooper graphics
+ - 
+
 Goals for 07/16/2016
 	O	test idle behaviors
 	O	AI can attack
