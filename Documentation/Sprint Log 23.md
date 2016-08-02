@@ -25,7 +25,31 @@ Date: 07/28/2016
 Day 6 Scrum Meeting:
 Date: 07/29/2016
  - worked on terrain and plague trooper graphics
- - 
+ - researched darkest dungeon
+
+Day 7 Scrum Meeting
+Date: 07/29/2016
+ - work on big project
+
+Day 8 Scrum Meeting
+Date: 07/30/2016
+ - work on big project
+ 
+Day 9 Scrum Meeting
+Date: 07/31/2016
+ - researched darkest dungeon
+ - worked on level editor
+
+Day 10 Scrum Meeting
+Date: 08/01/2016
+ - almost beat darkest dungeon
+ - worked on other prototypes
+ - finally got that attack done
+ - revised AI system to use states and sub-states
+
+Day 11 Scrum Meeting
+Date: 08/02/2016
+ - worked on level editor
 
 Goals for 07/16/2016
 	O	test idle behaviors
