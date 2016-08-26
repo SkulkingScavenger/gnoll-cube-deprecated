@@ -1,0 +1,30 @@
+plinky - sits and shoots
+ghost - hovers around and flings projectiles
+knight - paces and swings
+skeleton archer
+skeleton thrower - throws stuff in an arc
+zombie - emerges from the ground
+wolf - jumps
+slime - splits
+
+fire trap
+spikes
+spike trap
+
+axe knight - swings in broad arcs for heavy damage, blocks with shield
+sword knight - swings in short rapid arcs, blocks with shield
+flail knight - swings flail in a circle while strafing
+spear knight - jabs in close combat, throws spears at a distance while strafing
+
+loxodon hammer guard - swings a giant hammer for heavy damage in a cone
+loxodon spear guard - charges in a line. sweeps in an arc in close combat
+
+mounted lance knight - charges in a line, tramples and pivots in close combat
+
+attack dog - leaps around at enemies
+
+crossbowman - fires in a line, jabs with bayonet
+
+archer - fires into the air
+
+rhino cavalry - charges in a line
