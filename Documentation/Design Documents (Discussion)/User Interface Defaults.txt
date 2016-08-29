@@ -1,0 +1,13 @@
+Move (NSEW)				WASD				Left Stick
+pivot					Shift				right bumper
+strafe					Ctrl				right z
+roll					doubletap			X
+
+Interact				I					Y
+
+Use Ability				Space				A
+Use Item				Alt					B
+scroll ability (LR)		OP					Right Stick (NS)
+scroll item (LR)		{}					Right Stick (WE)
+
+Start					Enter				Start

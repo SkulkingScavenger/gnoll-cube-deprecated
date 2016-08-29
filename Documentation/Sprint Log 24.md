@@ -37,7 +37,7 @@ Date: 08/14/2016
 
 Day 9 Scrum Meeting
 Date: 08/15/2016
- - knight windup NN, NE, SE, SS
+ - knight windup complete
 
 Day 10 Scrum Meeting
 Date: 08/16/2016
@@ -46,14 +46,16 @@ Date: 08/16/2016
 Day 11 Scrum Meeting
 Date: 08/17/2016
  - music
- - knight windup NN, NE, SE, SS
+ - knight attack
 
+Day 12 Scrum Meeting
+Date: 08/18/2016
+ - knight stand
 
-Goals for Sprint 22: Complete the Prototype (for real this time)
-	modular room generation (with at least 2 available modules)
-	functioning AI sense simulation
-	Node-based AI navigation
-	entertaining combat vs AI
-		charge
-		AoE attacks w/ delay & tells
-		knockback/stun
+Day 13 Scrum Meeting
+Date: 08/19/2016
+ - plague trooper attack
+
+Day 14 Scrum Meeting
+Date: 08/20/2016
+ - took a holiday

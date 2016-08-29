@@ -1,0 +1,29 @@
+Loot Object
+	instantiable object
+	stores the id of an item prototype
+	interact to pick up
+
+Item Object
+	defines an object prototype
+	base stats
+	graphics and text
+	effect object
+
+Effect Object
+	an instantiable object that carries out the effect of an item or ability
+
+Item List
+	list of item prototypes
+
+
+	
+	Multiplayer stuff
+Caster is Master
+	create effect
+	send effect creation command to slaves
+
+Caster is Slave
+	send effect request to master
+	master receives request
+	master creates effect
+	master sends effect creation command to slaves

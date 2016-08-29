@@ -377,3 +377,22 @@ End Date: 03/05/2016
 	 - revise dialogue menu
  - 3. Improve Menus Again
 	 - mostly just make them not look so terrible.
+
+### Sprint 25:
+Start Date: 02/21/2016
+End Date: 03/05/2016
+ - 1. Polish Combat
+ 	 - damage
+	 - knockback
+	 - blood
+	 - numbers
+ - 2. Revise Level Editor
+	 - make rooms diamond shaped
+ - 3. Graphics
+	 - finish combat stuff
+
+ - 5. Complete at least one Dungeon
+	 - set up the overworld map better than it is (show information and stuff)
+	 - set up the dungeon generation algorithm to include things like minibosses, bonus objectives, gold count etc.
+	 - put the staircase back in
+	 - create a victory indicator or something
