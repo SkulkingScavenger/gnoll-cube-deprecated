@@ -284,6 +284,7 @@
     <font>fonts\font1</font>
     <font>fonts\my_font</font>
     <font>fonts\font3</font>
+    <font>fonts\font4</font>
   </fonts>
   <objects name="objects">
     <objects name="Control">

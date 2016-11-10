@@ -1,0 +1,221 @@
+<html>
+	<head>
+		<title>Xin Help</title>
+		<style>
+			body {
+				background: #1a1a1a;
+				font-family:sans-serif;
+			}
+			
+			#contentBox {
+				background:#222222;
+				border-width: 0.1em;
+				border-style: solid;
+				border-color: #101010;
+				width:720px;
+				height:auto;
+				padding:10px;
+				margin-left:auto;
+				margin-right:auto;
+				box-shadow: 0 0 30px #000000;
+				text-align:center;
+				font-family:sans-serif;
+				font-size:1em;
+				color: #bbbbbb;
+			}
+			
+			#title {
+				color:#89ab38;
+				text-shadow: 0px 0px 12px #000000;
+				font-size:1.75em;
+			}
+			
+			#subTitle {
+				color:#89ab38;
+				text-shadow: 0px 0px 12px #000000;
+				font-size:1em;
+			}
+			
+			#jacksonYarr{
+				font-size:0.75em;
+			}
+			
+			#text {
+				width:640px;
+				margin-left:auto;
+				margin-right:auto;
+				color: #bbbbbb;
+				text-align:left;
+			}
+			
+			#spacer32 {
+				height:32px;
+			}
+			
+			#spacer16 {
+				height:16px;
+			}
+			
+			#yetAnother {
+				font-size:0.65em;
+				font-style:italic;
+			}
+			
+			#function {
+				color:#89ab38;
+			}
+			
+			#constant {
+				color:#D462FF;
+			}
+			
+			#warning {
+				color:#FBB117;
+			}
+			
+			#section {
+				color:#4C787E;
+			}
+			
+			#footer {
+				font-size:0.7em;
+				opacity:0.5;
+			}
+			
+			a:link {color:#AFC7C7;}
+			a:visited {color:#AFC7C7;}
+			a:active {color:#AFC7C7;}
+		</style>
+	</head>
+	
+	<body>
+	<div id="spacer32"></div>
+		<div id="contentBox">
+			<div id="spacer16"></div>
+			
+			<div id="title" align="center"><b>Xin v1.1</b><br></div>
+				<div id="subTitle">Yet Another XInput Extension<br><span id="jacksonYarr">By JacksonYarr</span></div>
+				
+			<div id="spacer32"></div>
+			<div id="text">
+			
+			<p align="center" id="section"><b>Features</b></p>
+			<p>- Full Xbox 360 Controller Support within GameMaker.
+			<br>- Button Pressed and Released Functions
+			<br>- Compensation for Thumbstick & Trigger Deadzones
+			<br>- Support for 4 Controllers, All Buttons & Force Feedback (Rumbling).
+			
+			<p align="center" id="section"><b>v1.1 Updates</b></p>
+			<p>- Fixed deadzone issue with thumbsticks causing limited range <em>(±0.25 - ±1)</em>. Range is now correctly <em>(0 - ±1).</em>
+			<p>- The functions <em>xin_check()</em>, <em>xin_check_pressed()</em>, and <em>xin_check_released()</em> now work with the left and right triggers.
+			
+			<p align="center" id="section"><b><br>Functions</b></p>
+			<p id="function"><em><b>xin_update(index);</b></em><p>Updates the state of the specified controller (0 - 3 or <b>all</b>). This needs to be called before new input can be received from the controller. Returns <b>true</b> or <b>false</b>.
+			
+			<p><i>(<b>False</b> generally indicates the specified controller is not connected.)</i>
+			
+			<p>If the keyword <b>all</b> is specified, the function will return the total number of controllers successfully updated.
+			
+			<p><em><span id="warning">Warning:</span></em> This function can be resource intensive, particularly when called with the keyword <b>all</b>. It is <b>strongly</b> recommended that the function only ever be called for the controllers currently active. <i>(i.e. Only ever use the keyword <b>all</b> to infrequently detect the total number of attached controllers, or if all 4 controllers are actually being used.)</i>
+			
+			<p><em>Note:</em> Returns -1 if the specified <i>index</i> is invalid.
+			
+			<p id="function"><em><b><br>xin_get_state(index, button);</b></em><p>Retrieves the current state of an input on the specified controller with a value of variable intensity (i.e. Thumbsticks and Triggers).
+			
+			<p>Returns a value between -1 and 1 indicating the intensity of the specified input.
+			
+			<p><i>Button</i> must be one of the following constants:
+			<p><span id="constant">xb_leftTrigger</span>
+			<br><span id="constant">xb_rightTrigger</span>
+			<br><span id="constant">xb_leftThumbX</span>
+			<br><span id="constant">xb_leftThumbY</span>
+			<br><span id="constant">xb_rightThumbX</span>
+			<br><span id="constant">xb_rightThumbY</span>
+			
+			<p><em>Note:</em> Returns 0 if the specified controller <i>index</i> or <i>button</i> is invalid.
+			
+			<p><em>Note:</em> The Y value returned when using constants <i>xb_leftThumbY</i> and <i>xb_rightThumbY</i> is pre-inverted to compensate for GameMakers inverted Y drawing. <i>(i.e. Pressing the thumbstick up will return a negative Y value, since -1 is the direction of up in GameMaker.)</i>
+			
+			<p id="function"><em><b><br>xin_check(index, button);</b></em><p>Checks whether the specified <i>button</i> is being pressed on the controller with the given <i>index</i>. Returns <b>true</b> or <b>false</b>. 
+			
+			<p><i>Button</i> must be one of the following constants:
+			<p><span id="constant">xb_a</span>
+			<br><span id="constant">xb_b</span>
+			<br><span id="constant">xb_x</span>
+			<br><span id="constant">xb_y</span>
+			<br><span id="constant">xb_leftShoulder</span>
+			<br><span id="constant">xb_rightShoulder</span>
+			<br><span id="constant">xb_leftThumb</span>
+			<br><span id="constant">xb_rightThumb</span>
+			<br><span id="constant">xb_up</span>
+			<br><span id="constant">xb_down</span>
+			<br><span id="constant">xb_left</span>
+			<br><span id="constant">xb_right</span>
+			<br><span id="constant">xb_start</span>
+			<br><span id="constant">xb_back</span>
+			<br><span id="constant">xb_leftTrigger</span>
+			<br><span id="constant">xb_rightTrigger</span>
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i> or <i>button</i> is invalid.
+			
+			<p><em>Note:</em> Use the function <em>xin_get_state()</em> to check the intensity of the left and right triggers.
+			
+			<p id="function"><em><b><br>xin_check_pressed(index, button);</b></em><p>Checks whether the specified <i>button</i> has been pressed on the controller with the given <i>index</i> since the controller was last updated. Returns <b>true</b> or <b>false</b>. 
+			
+			<p>See the <i>xin_check</i> function for a list of <i>button</i> constants.
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i> or <i>button</i> is invalid.
+			
+			<p id="function"><em><b><br>xin_check_released(index, button);</b></em><p>Checks whether the specified <i>button</i> has been released on the controller with the given <i>index</i> since the controller was last updated. Returns <b>true</b> or <b>false</b>. 
+			
+			<p>See the <i>xin_check</i> function for a list of <i>button</i> constants.
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i> or <i>button</i> is invalid.
+			
+			<p id="function"><em><b><br>xin_set_rumble(index, left, right)</b></em><p>Sets the force feedback 'rumble' level on the controller with the specified index (0 - 3 or <b>all</b>). <i>Left</i> indicates the intensity of the left motor <i>(0 to 1)</i>, a low frequency rumble motor. <i>Right</i> indicates the intensity of the right motor <i>(0 to 1)</i>, a high frequency vibration motor.
+			
+			<p>Returns <b>true</b>, <b>false</b> or the total number of successfully set controllers if the keyword <b>all</b> is specified.
+			
+			<p><i><span id="warning">Warning:</span></i> As with the <i>xin_update</i> function, use of the keyword <b>all</b> should be infrequent (unless 4 controllers are actually active).
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i>, <i>left</i> intensity or <i>right</i> intensity is invalid.
+			
+			
+			<p id="function"><em><b><br>xin_get_input(index);</b></em><p>This function will return values <i>(that correspond to a button constant)</i> of all buttons currently being pressed on the specified controller. Returns <b>false</b> when there are no more buttons to report.
+			
+			<p>This function can be used in conjunction with a while loop to retrieve all current button input. <i>(Excluding Trigger & Thumbstick positions)</i>
+			
+			<p><i>Note:</i> This function is similar to <i>xin_check</i>, however differs in the sense that there's no overhead checking the state of buttons that aren't being pressed.
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i> or <i>button</i> is invalid.
+			
+			<p><i><span id="warning">Warning:</span></i> This function will <b>not</b> report left or right trigger presses.
+			
+			<p id="function"><em><b><br>xin_get_input_bitmask(index);</b></em><p><i>[Advanced Function]</i> This function will return a decimal representation of a bitmask indicating all buttons currently being pressed on the specified controller.</i>
+			
+			<p>Information on the bitmask values of each controller button is available at the <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/microsoft.directx_sdk.reference.xinput_gamepad.aspx">Windows Dev Center<a>.
+			
+			<p><i>Note:</i> Using this value you can replicate the <i>xin_get_input</i> function without the overhead of potentially numerous external calls.
+			
+			<p><em>Note:</em> Returns -1 if the specified controller <i>index</i> is invalid.
+			
+			<p align="center" id="section"><br><b>License</b></p>
+			
+			<p align="center">CC0 1.0 Universal (CC0 1.0)<br>Public Domain Dedication
+			
+			<p>To the extent possible under law, Jack Hood <i>(JacksonYarr)</i> has waived all copyright and related or neighbouring rights to Xin. This work is published from: Australia.
+			
+			<p><i>(You can copy, modify and distribute the work, even for commercial purposes, all without asking permission.)</i>
+			
+			<p><a href="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</a>
+			
+			<p><br>Attribution is by no means required; however it's always greatly appreciated.
+			
+			<div id="spacer16"></div>
+			
+			</div>
+		</div>
+		<p align="center" id="footer"><br><a href="http://www.JacksonYarr.com/">http://www.JacksonYarr.com/</a>
+		<div id="spacer16"></div>
+	</body>
+</html>
