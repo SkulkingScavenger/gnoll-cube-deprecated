@@ -1,11 +1,4 @@
-Greetings, human.
-I'm Kikirak, and this is my associate, Rihazir.
-Welcome to Gnoll Raider Alpha: The Unvarnished Amalgamation
-Normally, you'd be playing as some generic grunt raider
-but in this special demonstration version, you get to play as the protagonists
-(that's us)
-
-Today we have a 
+Gnoll Raider Alpha: The Unvarnished Amalgamation
 
 
 Rihazir
