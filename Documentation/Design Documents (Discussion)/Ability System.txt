@@ -1,0 +1,93 @@
+Ability System
+
+ability_registry[]: 
+	an array of all ability prototype objects
+
+ability prototype: 
+	a persistent object instantiated once with a unique id, stored in ability_register
+	an object containing ability constants and casting routines
+	
+
+ability object: 
+	
+	contains information specific to the player, including modifiable stats 
+	non-persistent object instantiated once for each player who has the ability on entering a dungeon
+	(all ability specific modifications applied to the prototype on entering dungeon)
+	
+obj_player.abl[max_abl_count]: 
+	an array of ability ids equipped by the player
+	points to an object in abilities_array or the special object noone
+
+obj_player.abilities_array: 
+	an array of ability objects known to the player
+	generated on entering a dungeon and cleared on exit;
+	generated from obj_player.abilities_known 
+	cannot be altered
+
+obj_player.abilities_known:
+	2D array of id:level pairs in obj_player
+	can be altered outside of the dungeon
+	
+
+ability controller: 
+	a multi-instantiable object used to carry out the effect of an ability
+	
+
+Common Ability Stats
+	Power
+	Delay
+	Duration
+	Range
+	Cost
+	Cooldown
+
+Common Ability Attributes
+	Animation Name
+	Icon
+	Level
+	Controller
+	Projectile
+	Interruptable
+
+Ability Object States
+	Ready
+	Cooldown Timer
+	Casting Player
+	
+
+Process of casting an ability
+	1. process user input: check if valid command (not on cooldown, sufficient energy, not stunned etc.)
+	
+	2. multiplayer verification process: slave requests cast from master, master processes and distributes cast command
+	
+	3. caster pays energy costs and begins channeling the ability; if delay>0 windup animation begins; ready = false;
+	
+	4. if !interrupted create ability_controller/projectile and set parameters; if duration>0 ability animation plays
+	
+	5. finish casting ability; set cooldown_timer for ability_object; channeling = false; clean up
+
+Example: Evasion
+Evasion Raises speed and adds the "dodging" effect to the caster for a duration
+
+obj_ablprototype_evasion: the prototype
+	define constants
+	cast script
+	master handling script
+	slave receive script
+	text setter script
+	
+obj_abl_evasion
+	initialize stats and local variables
+	modified by traits and specialization
+	bool ready
+	int cd_timer
+
+obj_ablcontrol_evasion
+	displays effects and cleans up when the ability is finished
+	various timers control delay and duration
+	applies the actual effects using stats from obj_abl_evasion
+
+	
+	
+	
+	

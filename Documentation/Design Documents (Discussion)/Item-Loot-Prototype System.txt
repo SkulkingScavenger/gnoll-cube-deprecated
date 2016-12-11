@@ -12,18 +12,11 @@ Item Object
 Effect Object
 	an instantiable object that carries out the effect of an item or ability
 
-Item List
-	list of item prototypes
-
-
+Item Registry
+	array of item prototype objects
 	
-	Multiplayer stuff
-Caster is Master
-	create effect
-	send effect creation command to slaves
 
-Caster is Slave
-	send effect request to master
-	master receives request
-	master creates effect
-	master sends effect creation command to slaves
+Inventory consists of 2 arrays containing an item ID and an item count
+inventory slots store either an item ID or the special object noone
+The item bar has 4(?) slots that point to an index of the inventory
+	

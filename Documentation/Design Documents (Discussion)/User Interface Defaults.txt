@@ -1,3 +1,74 @@
+Commands
+	Move (E,N,W,S)
+	Pivot (change direction without moving)
+	Strafe (move without changing direction)
+	Cast Abilities[1-4] OR Scroll and Cast Ability
+	Use Items[1-4] OR Scroll and Cast Item
+	Start Menu
+	Interact
+	Accept
+	Toggle Mode
+	
+	Confirm
+	Cancel
+
+
+Keyboard Scheme A:
+	Left Hand:
+		pinky: Shift/Ctrl
+		ring: A
+		middle: W/S 
+		index: D
+		thumb: Space
+
+	Right Hand:
+		Thumb: Alt
+		index: l
+		middle: p/;
+		ring: '
+		pinky: Enter
+
+WASD: Move
+Space: Confirm/Attack
+
+Alt: Interact
+L:"P: Abilities[1-4]
+Enter: Start Menu
+
+Space + Shift: Attack 2
+L:"P + Shift: Items[1-4]
+L:"P + Ctrl: Abilities[5-8]
+
+
+Controller Scheme A:
+	Left Hand:
+		middle: Left Shoulder
+		index: Left Bumper
+		thumb: Joystick/arrowpad/Select
+
+	Right Hand:
+		Thumb: A/B/X/Y/Start
+		index: Right Bumper
+		middle: Right Shoulder
+
+Left-Stick: Move
+Arrowpad: Items[1-4]
+
+A: Attack/Confirm
+B: Attack 2/Cancel
+X: Interact
+Y: Toggle Ability Sets
+
+Left Bumper: Ability 1/ Ability 5
+Left Shoulder: Ability 2/ Ability 6
+Right Bumper: Ability 3/ Ability 7
+Right Shoulder: Ability 4/ Ability 8
+
+Start: Start Menu
+
+
+
+
 Move (NSEW)				WASD				Left Stick
 pivot					Shift				right bumper
 strafe					Ctrl				right z

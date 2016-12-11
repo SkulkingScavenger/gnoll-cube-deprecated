@@ -1,0 +1,9 @@
+ERROR in
+action number 1
+of  Step Event
+for object obj_dungeon_parent:
+
+Error in code at line 7:   
+    if(lc < destined_floor.module_count){                              ^at position 29: Unknown variable module_count
+
+
