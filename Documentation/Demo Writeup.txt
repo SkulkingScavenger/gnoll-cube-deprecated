@@ -2,7 +2,10 @@ Gnoll Raider Alpha: The Unvarnished Amalgamation
 
 
 Rihazir
-	Virulent Stab
+	Dagger(slash)
+	Dagger(toss)
+
+	Apply Poison
 	Toxic Grenade
 	Flashbang
 	Field Surgery
@@ -18,16 +21,18 @@ x1 defibrillator
 x2 leg of mutton
 	
 Kikirak
-	Scimitar Slash
+	Scimitar(slash)
+	Scimitar(parry)
+
+	Evasion
 	Sniper Shot
 	Smoke Screen
 	Stealth
 
 	Assassin's Instincts (increases back-attack bonus damage)
 	Lethality (back attacks instantly fatal)
-	Lurker (drops aggro passively)
-	
-	
+	Lurker (drops aggro passively) (in single-player, empowers stealth skills)
+
 
 Items
 x1 Sterilized Gauze
