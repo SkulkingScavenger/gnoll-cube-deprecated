@@ -3,13 +3,13 @@ Loot Object
 	stores the id of an item prototype
 	interact to pick up
 
-Item Object
+Item Prototype Object
 	defines an object prototype
 	base stats
 	graphics and text
 	effect object
 
-Effect Object
+Item Controller Object
 	an instantiable object that carries out the effect of an item or ability
 
 Item Registry

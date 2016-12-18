@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Other Event: User Defined 1
-for object obj_skillcontrol_snipershot:
+of  Step Event
+for object obj_dungeon_parent:
 
-Error in code at line 17:   
-  lastcreated.charge = target.timer;                                 ^at position 32: Unknown variable timer
+Error in code at line 125:   
+      cell = destined_floor.start_module.start_location;                                            ^at position 43: Unknown variable start_location
 
 

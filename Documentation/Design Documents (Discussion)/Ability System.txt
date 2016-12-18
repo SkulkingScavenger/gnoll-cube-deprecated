@@ -9,9 +9,8 @@ ability prototype:
 	
 
 ability object: 
-	
 	contains information specific to the player, including modifiable stats 
-	non-persistent object instantiated once for each player who has the ability on entering a dungeon
+	non-persistent object instantiated once for each player who has the ability on entering a dungeon (possibly with multiple copies of the same ability)
 	(all ability specific modifications applied to the prototype on entering dungeon)
 	
 obj_player.abl[max_abl_count]: 
@@ -34,12 +33,17 @@ ability controller:
 	
 
 Common Ability Stats
-	Power
-	Delay
-	Duration
-	Range
 	Cost
 	Cooldown
+
+Specific Ability Stats
+	skillpower: generic powerlevel
+	damage: damage dealt by the ability's effects
+	delay: time elapsed between casting the ability and the ability's effects
+	duration: how long the ability lasts
+	range: maximum distance the ability's projectiles travel before expiring
+	time_increment: for abilities whose effects change over time, the number of seconds elapsed between changes in state
+	effect_duration: how long the secondary effects created by the ability last
 
 Common Ability Attributes
 	Animation Name
@@ -66,28 +70,31 @@ Process of casting an ability
 	
 	5. finish casting ability; set cooldown_timer for ability_object; channeling = false; clean up
 
-Example: Evasion
-Evasion Raises speed and adds the "dodging" effect to the caster for a duration
 
-obj_ablprototype_evasion: the prototype
-	define constants
-	cast script
-	master handling script
-	slave receive script
-	text setter script
+Projectiles: may apply on-hit effects. execute effects only on enemies hit
+Effects/Buffs: apply passive modifiers to the target represented by effect objects. effects may or may not stack with others of the same kind
+Summons: an entity created by an ability whose death and creation are dealt with as npcs
 	
-obj_abl_evasion
-	initialize stats and local variables
-	modified by traits and specialization
-	bool ready
-	int cd_timer
+On hit effects
 
-obj_ablcontrol_evasion
-	displays effects and cleans up when the ability is finished
-	various timers control delay and duration
-	applies the actual effects using stats from obj_abl_evasion
+expiration conditions
+	passive effects: never expire
+	timed effects: last a fixed duration
+	limited use effects: expire after a certain number of uses
+	
+application conditions
+	on-cast/on-attack
+	on-hit: subset
+	
+control method
+	global control
+	controller object
+	buff object
+	static variables
 
 	
-	
-	
-	
+1. effect is applied; add effect object to effect_list;
+2. on attack, search effect_list for effects with trigger=="attack";
+3. for each, call effect event user1 (event_perform_object(crnt_effect,ev_other,ev_user1))
+
+
