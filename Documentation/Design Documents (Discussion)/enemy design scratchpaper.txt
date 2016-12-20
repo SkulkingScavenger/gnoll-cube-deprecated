@@ -1,3 +1,43 @@
+Sniper Enemy
+	Doesn't move much, unless cover is adjacent
+	high damage, long telegraph
+Loxodon
+	slow
+	hard to kill
+	armored
+	extremely dangerous attack
+	long telegraph
+Raukasha
+	Dangerous Miniboss
+	Ranged attacks
+	Mobile
+Dog Enemy
+	Chases the player
+	insignificant threat, serves primarily as an alert
+	harries the players
+Standard Guard
+	patrols
+	minor threat by itself
+	moderately challenging in melee
+	vulnerable to ranged attacks
+
+Spike Trap
+	dangerous terrain
+	makes dangerous encounters more dangerous
+Fire Trap
+	Makes navigation more difficult
+Noise Trap
+	Alerts guards
+attack Properties
+	can_dodge
+	pathing_mask
+	motion_type (static, sweep, projectile)
+	damage
+	applies_effect
+
+
+
+
 plinky - sits and shoots
 ghost - hovers around and flings projectiles
 knight - paces and swings
