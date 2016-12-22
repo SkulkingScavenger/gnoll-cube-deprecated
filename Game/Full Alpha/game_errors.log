@@ -3,7 +3,7 @@ action number 1
 of Alarm Event for alarm 0
 for object obj_atkcontrol_dagger:
 
-Error in code at line 4:   
-  lastcreated.x -= lastcreated.w/2;   lastcreated.y -= lastcreated.h/2;                                  ^at position 33: Unknown variable w
+Error in code at line 13:   
+    if(crnt_effect.activate_on_hit){                      ^at position 21: Unknown variable activate_on_hit
 
 
