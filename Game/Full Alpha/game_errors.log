@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Destroy Event
-for object obj_projectile_slimemortar:
+of Alarm Event for alarm 0
+for object obj_atkcontrol_dagger:
 
-Error in code at line 5:   
-    deal_damage(THIS,id,THIS.damage);                                ^at position 31: Unknown variable damage
+Error in code at line 4:   
+  lastcreated.x -= lastcreated.w/2;   lastcreated.y -= lastcreated.h/2;                                  ^at position 33: Unknown variable w
 
 
