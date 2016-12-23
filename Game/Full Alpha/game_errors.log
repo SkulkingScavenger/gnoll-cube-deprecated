@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Alarm Event for alarm 0
-for object obj_atkcontrol_dagger:
+of Other Event: User Defined 0
+for object obj_itemprototype_smokegrenade:
 
-Error in code at line 13:   
-    if(crnt_effect.activate_on_hit){                      ^at position 21: Unknown variable activate_on_hit
+Error in code at line 5:   
+    lastcreated.duration = crnt_item.duration*room_speed;                              ^at position 29: Unknown variable crnt_item
 
 
