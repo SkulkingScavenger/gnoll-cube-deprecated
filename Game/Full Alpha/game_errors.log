@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Other Event: User Defined 2
-for object obj_status_attackpoison:
+of Other Event: User Defined 4
+for object obj_skillprototype_applypoison:
 
-Error in code at line 5:   
-lastcreated.time_increment = time_increment;                                ^at position 31: Unknown variable time_increment
+Error in code at line 2:   
+if(duration == 1){plural_duration = " second for ";}else{plural_duration = " seconds for ";}      ^at position 5: Unknown variable duration
 
 

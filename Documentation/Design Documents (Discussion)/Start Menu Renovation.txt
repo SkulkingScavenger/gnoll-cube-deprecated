@@ -19,3 +19,29 @@ obj_submenu_parent
 	obj_submenu_grid (used for things that have a full grid, including single-row )
 	obj_submenu_list
 	obj_submenu_ragged
+	
+
+
+Inventory
+
+
+	Dropdown commands
+		move item
+			swap item with contents of target slot
+			if item is the same type, merge them instead
+		destroy item
+			just replaces the item with noone and sets count to 0
+		drop item
+			create loot object of item type and item quantity
+			set item to noone and count to 0
+		equip item
+			pick an item_slot, set that slot to selected id
+
+		split item
+			complicated
+		use?
+			call item effect
+		item specific?
+			call item special
+		combine?
+			merges two items (i.e., poison and caltrops)

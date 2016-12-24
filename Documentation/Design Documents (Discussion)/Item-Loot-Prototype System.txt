@@ -20,3 +20,6 @@ Inventory consists of 2 arrays containing an item ID and an item count
 inventory slots store either an item ID or the special object noone
 The item bar has 4(?) slots that point to an index of the inventory
 	
+item_slot[]
+inventory_item_id[]
+inventory_item_count[]
