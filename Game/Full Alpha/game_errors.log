@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Other Event: User Defined 4
-for object obj_skillprototype_applypoison:
+of  Step Event
+for object obj_skillcontrol_scavenge:
 
-Error in code at line 2:   
-if(duration == 1){plural_duration = " second for ";}else{plural_duration = " seconds for ";}      ^at position 5: Unknown variable duration
+Error in code at line 10:   
+x = caster.x + caster.w/2 - w/2;                               ^at position 30: Unknown variable w
 
 
