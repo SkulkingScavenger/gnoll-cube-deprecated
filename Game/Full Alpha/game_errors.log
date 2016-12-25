@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of  Step Event
-for object obj_skillcontrol_scavenge:
+of Draw Event
+for object obj_enemy_boss00_spawn:
 
-Error in code at line 10:   
-x = caster.x + caster.w/2 - w/2;                               ^at position 30: Unknown variable w
+Error in code at line 36:   
+if(animation_previous != animation){      ^at position 5: Unknown variable animation_previous
 
 
