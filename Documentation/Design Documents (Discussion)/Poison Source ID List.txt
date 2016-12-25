@@ -1,0 +1,5 @@
+weapon_poison source_id
+
+0: generic(default)
+1: apply poison ability
+2: essence of nightshade
