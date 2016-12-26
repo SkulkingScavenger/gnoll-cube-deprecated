@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of  Step Event
-for object obj_menu_dialogue:
+of Other Event: User Defined 0
+for object obj_stairs:
 
-In script dlg_load_command:Error in code at line 5:   
-script_execute(cmd.cmd,cmd.arg1,cmd.arg2,cmd.arg3,cmd.arg4);                      ^at position 21: Unknown variable cmd
+Error in code at line 10:   
+boss_stairs = ds_list_find_value(crnt_dungeon.floor_list,destination).boss_floor;                                                                         ^at position 72: Unknown variable boss_floor
 
 
