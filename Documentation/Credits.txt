@@ -1,0 +1,7 @@
+CREDITS
+
+Custom Stage Template Editor made by Zin
+
+The older versions of this game used 39.dll by 39ster from the gamemaker community for LAN support. 
+
+The prototype uses Xin_v1.1 by JacksonYarr for Xbox Controller Support
