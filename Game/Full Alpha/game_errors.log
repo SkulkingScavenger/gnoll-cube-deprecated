@@ -1,9 +1,9 @@
 ERROR in
-action number 1
-of Other Event: User Defined 0
-for object obj_stairs:
+action number 2
+of Create Event
+for object obj_menu_intro:
 
-Error in code at line 10:   
-boss_stairs = ds_list_find_value(crnt_dungeon.floor_list,destination).boss_floor;                                                                         ^at position 72: Unknown variable boss_floor
+In script init:In script dllinit:Error in code at line 9:   
+external_call(external_define(global._39dll, "dllInit", dll_cdecl, ty_real, 0));                 ^at position 16: This function is not available in the Lite Edition.
 
 
