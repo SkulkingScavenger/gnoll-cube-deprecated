@@ -1,0 +1,29 @@
+Multiplayer Refactor Notes
+
+Dead Reckoning:
+	play animation. move in straight line with momentum (set x,y on packet receipt)
+
+The Three Phases
+	Initial Request(Slave)
+	Master Receives, processes and distributes request Request/ Initial Request(Master)
+	Slaves Receive and process Request
+
+Script Conventions
+	protocol handling scripts use the name of the packet id Constant (i.e., mu_move)
+	convenience functions (that initialize a request) should be prefixed remote_ (ie, remote_move)
+
+move and step should be handled together in mu_update()
+
+next_room
+next_floor
+
+
+Only Master should create NPCs directly so they can be registered properly
+Slaves must contact master to verify all user input
+
+How to handle User Cast Ability?
+	pass a phase variable around
+	call the ability again with the second phase variable on fire
+	animation info should be shared in update()
+	just use it to create the projectile, let the slave handle the rest client-side
+

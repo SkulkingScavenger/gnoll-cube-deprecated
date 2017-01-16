@@ -1,9 +1,9 @@
 ERROR in
-action number 2
-of Create Event
-for object obj_menu_intro:
+action number 1
+of Other Event: User Defined 1
+for object obj_skillprototype_flashpowder:
 
-In script init:In script dllinit:Error in code at line 9:   
-external_call(external_define(global._39dll, "dllInit", dll_cdecl, ty_real, 0));                 ^at position 16: This function is not available in the Lite Edition.
+Error in code at line 30:   
+  writebyte(skill_id);               ^at position 14: Unknown variable skill_id
 
 
