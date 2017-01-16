@@ -1,0 +1,73 @@
+REMAINING TASKS
+
+
+1. Refactor multiplayer (update protocols, update level-load code)
+	a. stairs
+	b. triggered abilities
+2. make enemies more interesting somehow
+	a. reduce hp and knockback doesn't interrupt
+	b. make more of them
+3. death animations (also an actual game-over screen)
+4. inventory dropdown menus
+5. Passives and Traits
+6. Gold System
+7. Progression System
+8. dynamic loading screen
+9. add multiplayer HUD
+10. Warband panel in Start Menu
+11. stairs on button press
+
+
+REMAINING GRAPHICS
+	Loading Screen
+	Game Over Screen
+	Dialogue Background
+
+GNOLL RAIDER PIPELINE
+
+Multiplayer System
+	Multiplayer Packet_ID Constants
+	Multiplayer Scripts
+
+Basic Movement/Combat System
+	Player Scripts
+
+Menu System
+	Initial Setup
+	Menu Objects
+	Menu Scripts
+
+Dungeon Generation System
+	Dungeon Generation Scripts
+	Dungeon Dummy Objects
+
+Dialogue System
+
+GRAPHICS
+
+knight animation
+	recover
+	stand
+	stand ready
+	battlecry
+	calmdown
+	knockback
+	death
+
+plague trooper animation
+	channel-healing	
+	death
+	stun
+
+Assassin Animations
+	death
+	stun
+	crossbow
+
+effects
+	sword blast
+	blood spatter
+	stun
+	slow
+	poison
+	floating numbers

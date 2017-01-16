@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Other Event: User Defined 1
-for object obj_skillprototype_flashpowder:
+of Destroy Event
+for object obj_gnoll:
 
-Error in code at line 30:   
-  writebyte(skill_id);               ^at position 14: Unknown variable skill_id
+In script gnoll_death:Error in code at line 6:   
+mu[cp].gravex = mu[sid].x;                      ^at position 21: Unknown variable sid
 
 

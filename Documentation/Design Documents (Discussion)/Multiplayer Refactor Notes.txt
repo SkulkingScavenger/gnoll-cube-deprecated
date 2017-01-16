@@ -21,9 +21,28 @@ next_floor
 Only Master should create NPCs directly so they can be registered properly
 Slaves must contact master to verify all user input
 
-How to handle User Cast Ability?
+///How to handle User Cast Ability?
 	pass a phase variable around
 	call the ability again with the second phase variable on fire
 	animation info should be shared in update()
 	just use it to create the projectile, let the slave handle the rest client-side
 
+///Treat Attack Like an Ability
+	Prototype	Attack			Phase
+	Event0		gnoll_atk		Cast
+	Event1		mu_attack(m)	Master Handle
+	Event2		mu_attack(s)	Slave Handle
+
+
+///Units that spawn other units are responsible for updating the units they spawn
+//expand this to include projectiles
+
+	lastcreated = projectile.create();
+	lastcreated.id = spawn_count;
+	spawns[spawn_count] = lastcreated;
+	spawn_count++;
+
+	writeint(spawn_count);
+	for(i=0;i<spawn_count;i++){
+		spawns[i].user0();
+	}
