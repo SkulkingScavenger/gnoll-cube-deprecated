@@ -7,21 +7,21 @@ REMAINING TASKS
 2. make enemies more interesting somehow
 	a. reduce hp and knockback doesn't interrupt
 	b. make more of them
-3. death animations (also an actual game-over screen)
+3. stairs on button press
 4. inventory dropdown menus
-5. Passives and Traits
-6. Gold System
-7. Progression System
-8. dynamic loading screen
-9. add multiplayer HUD
-10. Warband panel in Start Menu
-11. stairs on button press
+5. Gold System
+6. Progression System
+7. dynamic loading screen
+8. add multiplayer HUD
+9. Warband panel in Start Menu
+10. Passives and Traits
 
 
-REMAINING GRAPHICS
+IMPORTANT GRAPHICS
+	death animations
 	Loading Screen
 	Game Over Screen
-	Dialogue Background
+	Improve Dialogue Background
 
 GNOLL RAIDER PIPELINE
 
