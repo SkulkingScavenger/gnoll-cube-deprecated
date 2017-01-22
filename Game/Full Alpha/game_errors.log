@@ -1,9 +1,9 @@
 ERROR in
 action number 1
-of Destroy Event
-for object obj_gnoll:
+of  Step Event
+for object obj_dungeon_parent:
 
-In script gnoll_death:Error in code at line 6:   
-mu[cp].gravex = mu[sid].x;                      ^at position 21: Unknown variable sid
+Error in code at line 74:   
+      if(crnt_stairs.target_id == noone){                        ^at position 23: Unknown variable target_id
 
 

@@ -1,9 +1,9 @@
 ERROR in
 action number 1
 of  Step Event
-for object obj_gnoll:
+for object obj_dungeon_parent:
 
-In script gnoll_main:In script gnoll_set_animation:Error in code at line 17:   
-  animation = channeling_animation;                 ^at position 16: Unknown variable channeling_animation
+Error in code at line 74:   
+      if(crnt_stairs.target_id == noone){                        ^at position 23: Unknown variable target_id
 
 
