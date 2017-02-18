@@ -1,0 +1,11 @@
+
+___________________________________________
+ERROR in
+action number 1
+of  Step Event
+for object obj_dungeon_parent:
+
+Error in code at line 25:
+             if(crnt_npc.hp <= 0){
+                         ^
+at position 24: Unknown variable hp

@@ -1,47 +1,47 @@
 REMAINING TASKS
 
+2. "Warband" panel in Start Menu
+3. Passives and Traits
 
-1. Refactor multiplayer (update protocols, update level-load code)
-	a. stairs
-	b. triggered abilities
-2. make enemies more interesting somehow
-	a. reduce hp and knockback doesn't interrupt
-	b. make more of them
-3. stairs on button press
-4. inventory dropdown menus
-5. Gold System
-6. Progression System
-7. dynamic loading screen
-8. add multiplayer HUD
-9. Warband panel in Start Menu
-10. Passives and Traits
+ICEBOX
+Enemy Revision
+Gold & Progression System
+Dungeon Selection System
+Character Customization
 
+THINGS TO DO BEFORE UPLOAD
+	fullscreen
+	full dungeon enabled
+	music removed
+	full dialogue
+	"load" button disabled
+	Full Enemy list
+	Update title screen
 
 IMPORTANT GRAPHICS
 	death animations
 	Loading Screen
-	Game Over Screen
-	Improve Dialogue Background
+
+
 
 GNOLL RAIDER PIPELINE
+	Multiplayer System
+		Multiplayer Packet_ID Constants
+		Multiplayer Scripts
 
-Multiplayer System
-	Multiplayer Packet_ID Constants
-	Multiplayer Scripts
+	Basic Movement/Combat System
+		Player Scripts
 
-Basic Movement/Combat System
-	Player Scripts
+	Menu System
+		Initial Setup
+		Menu Objects
+		Menu Scripts
 
-Menu System
-	Initial Setup
-	Menu Objects
-	Menu Scripts
+	Dungeon Generation System
+		Dungeon Generation Scripts
+		Dungeon Dummy Objects
 
-Dungeon Generation System
-	Dungeon Generation Scripts
-	Dungeon Dummy Objects
-
-Dialogue System
+	Dialogue System
 
 GRAPHICS
 
