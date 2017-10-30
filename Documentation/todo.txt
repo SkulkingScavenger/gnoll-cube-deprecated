@@ -1,10 +1,10 @@
 REMAINING TASKS
 
+1. Emergency Revision
 2. "Warband" panel in Start Menu
 3. Passives and Traits
 
 ICEBOX
-Enemy Revision
 Gold & Progression System
 Dungeon Selection System
 Character Customization
